@@ -1,0 +1,8 @@
+172.21.0.3 - - [01/Nov/2021:20:42:52 +0000] "GET / HTTP/1.1" 200 160 "-" "Links (2.18; Linux 5.10.16.3-microsoft-standard-WSL2 x86_64; GNU C 8.3; text)"
+172.21.0.3 - - [02/Nov/2021:11:28:14 +0000] "GET /misnoticias HTTP/1.0" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+172.21.0.3 - - [02/Nov/2021:11:29:08 +0000] "GET / HTTP/1.0" 200 160 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36"
+172.21.0.3 - - [02/Nov/2021:13:31:15 +0000] "GET / HTTP/1.1" 200 160 "-" "Links (2.18; Linux 5.10.16.3-microsoft-standard-WSL2 x86_64; GNU C 8.3; text)"
+172.21.0.3 - - [02/Nov/2021:13:38:26 +0000] "GET / HTTP/1.1" 200 160 "-" "Links (2.18; Linux 5.10.16.3-microsoft-standard-WSL2 x86_64; GNU C 8.3; text)"
+172.21.0.3 - - [02/Nov/2021:13:53:51 +0000] "GET / HTTP/1.1" 200 160 "-" "Links (2.18; Linux 5.10.16.3-microsoft-standard-WSL2 x86_64; GNU C 8.3; text)"
+172.21.0.3 - - [03/Nov/2021:10:11:05 +0000] "GET / HTTP/1.1" 200 160 "-" "Links (2.18; Linux 5.10.16.3-microsoft-standard-WSL2 x86_64; GNU C 8.3; text)"
+172.21.0.3 - - [03/Nov/2021:10:11:10 +0000] "GET / HTTP/1.1" 200 160 "-" "Links (2.18; Linux 5.10.16.3-microsoft-standard-WSL2 x86_64; GNU C 8.3; text)"
