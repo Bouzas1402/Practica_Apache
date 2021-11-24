@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  dns-bind9:
+    image: dns:bind9-9.16
+    container_name: dns-bind9
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "127.0.0.1:953:953/tcp"
+    dns: 127.0.0.1
+    dns_search: carlosgs.es
+    networks:
+      dns_mi_red:
+        ipv4_address: 172.21.0.2
+
+  dns-nginx1:
+    image: nginx
+    container_name: dns-nginx1
+    ports:
+      - 80:80
+    volumes:
+      - ./webapp:/usr/share/nginx/html
+    depends_on:
+      - dns-bind9
+    dns: 172.21.0.2
+    dns_search: carlosgs.es
+    networks:
+      dns_mi_red:
+        ipv4_address: 172.21.0.3
+
+networks:
+  dns_mi_red:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.21.0.0/16"
+
+volumes:
+  webapp:

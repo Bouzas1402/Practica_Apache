@@ -1,0 +1,11 @@
+ldapsearch -x -b "cn=operaciones,ou=Groups,dc=carlosbouzas,dc=es" -D "cn=admin,dc=carlosbouzas,dc=es" -w quevedo
+ldapsearch -x -D "cn=admin,dc=carlosbouzas,dc=es" -W -f /container/service/slapd/assets/config/bootstrap/ldif/custom/50-carlosbouzas.ldif
+ldapsearch -x -b "ui=desarrollo,ou=Groups,dc=carlosbouzas,dc=es" -D "cn=admin,dc=carlosbouzas,dc=es" -w quevedo
+
+ldapsearch -x -H "ldap://openldap" -D "cn=admin,dc=carlosbouzas,dc=es" -w quevedo -b "dc=carlos,dc=carlos" '(&(objectClass=groupOfNames)(member=cn=root,ou=django,dc=openldap))'
+
+ldapsearch -x -b "dc=carlosbouzas,dc=es" '(&(objectClass=groupOfUniqueNames)(uniqueMember=uid=operaciones,dc=carlosbouzas,dc=es))'
+
+ldapsearch -LLL -x -h localhost -b 'dc=carlosbouzas,dc=es' '(uid=desarrollo)' dn
+
+ldapsearch -LLL -x -h localhost -b 'dc=carlosbouzas,dc=es' -D "cn=admin,dc=carlosbouzas,dc=es" -w quevedo '(uid=desarrollo)' dn=admin,dc=carlosbouzas,dc=es" -w quevedo '(uid=desarrollo)' dn

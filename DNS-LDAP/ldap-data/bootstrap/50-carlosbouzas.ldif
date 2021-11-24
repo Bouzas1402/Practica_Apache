@@ -1,0 +1,56 @@
+dn: uid=desarrollo,dc=carlosbouzas,dc=es
+changetype: add
+objectclass: inetOrgPerson
+uid: desarrollo
+cn: desarrollo
+givenname: desarrollo
+sn: Desarrollo
+displayname: Usuario Desarrollo
+mail: carlos.bouzas@educa.madrid.org
+userpassword: quevedo
+
+dn: uid=operaciones,dc=carlosbouzas,dc=es
+changetype: add
+objectclass: inetOrgPerson
+uid: operaciones
+cn: operaciones
+givenname: operaciones
+sn: Operaciones
+displayname: Usuario Operaciones
+mail: carlos.bouzas@educa.madrid.org
+userpassword: ops
+
+dn: uid=dbadmin,dc=carlosbouzas,dc=es
+changetype: add
+objectclass: inetOrgPerson
+uid: dbadmin
+cn: dbadmin
+givenname: dbadmin
+sn: Administrador de BD
+displayname: BD Admin
+mail: carlos.bouzas@educa.madrid.org
+userpassword: carlos
+
+
+dn: ou=Groups,dc=carlosbouzas,dc=es
+changetype: add
+objectclass: organizationalUnit
+ou: Groups
+
+dn: ou=Users,dc=carlosbouzas,dc=es
+changetype: add
+objectclass: organizationalUnit
+ou: Users
+
+dn: cn=Admins,ou=Groups,dc=carlosbouzas,dc=es
+changetype: add
+cn: Admins
+objectclass: groupOfUniqueNames
+uniqueMember: uid=dbadmin,dc=carlosbouzas,dc=es
+
+dn: cn=Operaciones,ou=Groups,dc=carlosbouzas,dc=es
+changetype: add
+cn: Operaciones
+objectclass: groupOfUniqueNames
+uniqueMember: uid=operaciones,dc=carlosbouzas,dc=es
+uniqueMember: uid=desarrollo,dc=carlosbouzas,dc=es

@@ -1,0 +1,1458 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>apuntes:servidores_web [Despliegue de Aplicaciones Web]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <script type="text/javascript">
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//piwik.arkabytes.com/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '5']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <meta name="generator" content="DokuWiki"/>
+    <meta name="theme-color" content="#008800"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="apuntes,servidores_web"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="assets/opensearch.php" title="Despliegue de Aplicaciones Web"/>
+    <link rel="start" href="/"/>
+    <link rel="contents" href="/apuntes:servidores_web?do=index" title="Sitemap"/>
+    <link rel="manifest" href="assets/manifest.php"/>
+    <link rel="alternate" type="application/rss+xml" title="Recent Changes" href="assets/feed.php"/>
+    <link rel="alternate" type="application/rss+xml" title="Current namespace" href="assets/feed.php?mode=list&amp;ns=apuntes"/>
+    <link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/apuntes:servidores_web"/>
+    <link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/apuntes:servidores_web"/>
+    <link rel="canonical" href="https://despliegue.codeandcoke.com/apuntes:servidores_web"/>
+    <link rel="stylesheet" href="assets/css.php?t=dokuwiki&amp;tseed=f17de1c5583bfecadb5a188b480c2cc7"/>
+    <!--[if gte IE 9]><!-->
+    <script >/*<![CDATA[*/var NS='apuntes';var JSINFO = {"id":"apuntes:servidores_web","namespace":"apuntes","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+    /*!]]>*/</script>
+    <script charset="utf-8" src="assets/jquery.php?tseed=34a552433bc33cc9c3bc32527289a0b2" defer="defer"></script>
+    <script charset="utf-8" src="assets/js.php?t=dokuwiki&amp;tseed=f17de1c5583bfecadb5a188b480c2cc7" defer="defer"></script>
+    <script type="text/javascript" charset="utf-8"></script>
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="/lib/tpl/dokuwiki/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+</head>
+
+<body>
+<div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+
+    <!-- ********** HEADER ********** -->
+    <div id="dokuwiki__header"><div class="pad group">
+
+
+        <div class="headings group">
+            <ul class="a11y skip">
+                <li><a href="#dokuwiki__content">skip to content</a></li>
+            </ul>
+
+            <h1><a href="/start"  accesskey="h" title="[H]"><img src="/_media/wiki:logo.png" width="64" height="64" alt="" /> <span>Despliegue de Aplicaciones Web</span></a></h1>
+            <p class="claim">2º DAW</p>
+        </div>
+
+        <div class="tools group">
+            <!-- USER TOOLS -->
+            <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li class="action login"><a href="/apuntes:servidores_web?do=login&amp;sectok=" title="Log In" rel="nofollow"><span>Log In</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+
+            <!-- SITE TOOLS -->
+            <div id="dokuwiki__sitetools">
+                <h3 class="a11y">Site Tools</h3>
+                <form action="/start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="apuntes:servidores_web" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="apuntes:servidores_web" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Show pagesource</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Recent Changes</option><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Log In</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+                <ul>
+                    <li class="action recent"><a href="/apuntes:servidores_web?do=recent" title="Recent Changes [r]" rel="nofollow" accesskey="r">Recent Changes</a></li><li class="action media"><a href="/apuntes:servidores_web?do=media&amp;ns=apuntes" title="Media Manager" rel="nofollow">Media Manager</a></li><li class="action index"><a href="/apuntes:servidores_web?do=index" title="Sitemap [x]" rel="nofollow" accesskey="x">Sitemap</a></li>            </ul>
+            </div>
+
+        </div>
+
+        <!-- BREADCRUMBS -->
+        <div class="breadcrumbs">
+            <div class="trace"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="/extra:descargas"  class="breadcrumbs" title="extra:descargas">descargas</a></bdi> <span class="bcsep">•</span> <bdi><a href="/apuntes:documentacion"  class="breadcrumbs" title="apuntes:documentacion">documentacion</a></bdi> <span class="bcsep">•</span> <bdi><a href="/apuntes:introduccion"  class="breadcrumbs" title="apuntes:introduccion">introduccion</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="/apuntes:servidores_web"  class="breadcrumbs" title="apuntes:servidores_web">servidores_web</a></bdi></span></div>
+        </div>
+
+
+
+        <hr class="a11y" />
+    </div></div><!-- /header -->
+
+    <div class="wrapper group">
+
+        <!-- ********** ASIDE ********** -->
+        <div id="dokuwiki__aside"><div class="pad aside include group">
+            <h3 class="toggle">Sidebar</h3>
+            <div class="content"><div class="group">
+
+                <h3 class="sectionedit1" id="despliegue_de_aplicaciones_web">Despliegue de Aplicaciones Web</h3>
+                <div class="level3">
+                    <ol>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">Arquitecturas web</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">Servidores web</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_aplicaciones" class="wikilink1" title="apuntes:servidores_aplicaciones" data-wiki-id="apuntes:servidores_aplicaciones">Servidores de aplicaciones</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servicios_transferencia" class="wikilink1" title="apuntes:servicios_transferencia" data-wiki-id="apuntes:servicios_transferencia">Servicios de transferencia de archivos</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:documentacion" class="wikilink1" title="apuntes:documentacion" data-wiki-id="apuntes:documentacion">Documentación de aplicaciones web</a></div>
+                        </li>
+                    </ol>
+                    <hr />
+
+                </div>
+                <!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Despliegue de Aplicaciones Web&quot;,&quot;hid&quot;:&quot;despliegue_de_aplicaciones_web&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-354&quot;} -->
+                <h3 class="sectionedit2" id="anexos">Anexos</h3>
+                <div class="level3">
+                    <ol>
+                        <li class="level1"><div class="li"> <a href="/apuntes:linux" class="wikilink1" title="apuntes:linux" data-wiki-id="apuntes:linux">Linux</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:docker" class="wikilink1" title="apuntes:docker" data-wiki-id="apuntes:docker">Docker</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:jmeter" class="wikilink1" title="apuntes:jmeter" data-wiki-id="apuntes:jmeter">Apache JMeter</a></div>
+                        </li>
+                    </ol>
+                    <hr />
+
+                </div>
+                <!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Anexos&quot;,&quot;hid&quot;:&quot;anexos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;355-474&quot;} -->
+                <h3 class="sectionedit3" id="enlaces">Enlaces</h3>
+                <div class="level3">
+                    <ul>
+                        <li class="level1"><div class="li"> <a href="/extra:descargas" class="wikilink1" title="extra:descargas" data-wiki-id="extra:descargas">Descargas</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/extra:software" class="wikilink1" title="extra:software" data-wiki-id="extra:software">Software necesario</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/extra:referencias" class="wikilink1" title="extra:referencias" data-wiki-id="extra:referencias">Referencias</a></div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Enlaces&quot;,&quot;hid&quot;:&quot;enlaces&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;475-&quot;} -->                                            </div></div>
+        </div></div><!-- /aside -->
+
+        <!-- ********** CONTENT ********** -->
+        <div id="dokuwiki__content"><div class="pad group">
+
+            <div class="pageId"><span>apuntes:servidores_web</span></div>
+
+            <div class="page group">
+                <!-- wikipage start -->
+                <!-- TOC START -->
+                <div id="dw__toc" class="dw__toc">
+                    <h3 class="toggle">Table of Contents</h3>
+                    <div>
+
+                        <ul class="toc">
+                            <li class="level2"><div class="li"><a href="#servidores_web">Servidores web</a></div></li>
+                            <li class="level2"><div class="li"><a href="#apache">Apache</a></div>
+                                <ul class="toc">
+                                    <li class="level3"><div class="li"><a href="#instalacion">Instalación</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#configuracion">Configuración</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#configuracion_principal">Configuración principal</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#apache2conf">apache2.conf</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#portsconf">ports.conf</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#sites-available_enabled">sites-available/enabled</a></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="level3"><div class="li"><a href="#como_crear_un_hosting_compartido_creacion_de_hosts_virtuales">Cómo crear un hosting compartido (Creación de hosts virtuales)</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#instalacion_y_configuracion_de_modulos">Instalación y configuración de modulos</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#soporte_para_php">Soporte para PHP</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#soporte_para_python_wsgi">Soporte para Python (WSGI)</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#autenticacion_http">Autenticación HTTP</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#autenticacion_http_con_htaccess">Autenticación HTTP con .htaccess</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#impedir_que_se_liste_un_directorio">Impedir que se liste un directorio</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#limitar_el_ancho_de_banda">Limitar el ancho de banda</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#reescritura_de_urls">Reescritura de URLs</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#soporte_ssl_para_conexiones_seguras_https">Soporte SSL para conexiones seguras HTTPS</a></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="level3"><div class="li"><a href="#personalizar_las_paginas_de_error">Personalizar las páginas de error</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#ficheros_log">Ficheros log</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#ficheros_accesslog">Ficheros access.log</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#ficheros_errorlog">Ficheros error.log</a></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="level3"><div class="li"><a href="#seguridad">Seguridad</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#configurar_ssl_tls_en_apache">Configurar SSL/TLS en Apache</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#proteccion_frente_a_atacantes">Protección frente a atacantes</a></div></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="level2"><div class="li"><a href="#despliegue_de_sitios_web">Despliegue de sitios web</a></div></li>
+                            <li class="level2"><div class="li"><a href="#pruebas_de_rendimiento">Pruebas de rendimiento</a></div></li>
+                            <li class="level2"><div class="li"><a href="#estadisticas_web">Estadísticas web</a></div></li>
+                            <li class="level2"><div class="li"><a href="#monitorizacion">Monitorización</a></div></li>
+                            <li class="level2"><div class="li"><a href="#utilizar_contenedores_con_docker">Utilizar contenedores con Docker</a></div></li>
+                            <li class="level2"><div class="li"><a href="#ejercicios">Ejercicios</a></div></li>
+                            <li class="level2"><div class="li"><a href="#proyectos_de_ejemplo">Proyectos de Ejemplo</a></div></li>
+                            <li class="level2"><div class="li"><a href="#practicas">Prácticas</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- TOC END -->
+
+                <h2 class="sectionedit1" id="servidores_web">Servidores web</h2>
+                <div class="level2">
+
+                    <p>
+                        Aunque son muchos los servidores web que podemos encontrar disponibles en Internet<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>, a la hora de la verdad, entre casi la totalidad de todos los sitios web disponibles hoy en dia Internet sólo se están utilizando unos 4 diferentes.
+                    </p>
+
+                    <p>
+                        Existen un par de servidores web (<a href="http://httpd.apache.org" class="urlextern" title="http://httpd.apache.org" rel="ugc nofollow">Apache</a> y <a href="https://www.iis.net" class="urlextern" title="https://www.iis.net" rel="ugc nofollow">Microsoft IIS</a>) de uso general y muy extendido que se reparten casi la totalidad del mercado. Por otra parte está <a href="https://nginx.org/en/" class="urlextern" title="https://nginx.org/en/" rel="ugc nofollow">nginx</a>, relativamente reciente, y que ha cogido bastante popularidad en poco tiempo. También aparece alguna solución de Google debido a la popularidad de sus servicios. A partir de ahí, el resto de soluciones, quizás por ser más específicas para productos o tecnologías más concretas y menos extendidas, apenas significan nada en el reparto total. Quizás, junto con el resto de servidores, tambíén puede destacar <a href="https://www.lighttpd.net" class="urlextern" title="https://www.lighttpd.net" rel="ugc nofollow">lighttpd</a>, puesto que actualmente se está hablando bastante de él por su bajo consumo de memoria.
+                    </p>
+
+                    <p>
+                        En este capítulo nos centraremos exclusivamente en el servidor web <em>Apache</em> (no confundir con el <a href="http://www.apache.org" class="urlextern" title="http://www.apache.org" rel="ugc nofollow">Proyecto Apache</a> por ser el más utilizado actualmente (e históricamente) con bastante diferencia con respecto a los demás. Más adelante, centraremos algunas de las prácticas en la instalación y configuración de otros servidores web que hemos comentado anteriormente.
+                    </p>
+
+                    <p>
+                        <a href="http://www.netcraft.com" class="urlextern" title="http://www.netcraft.com" rel="ugc nofollow">Netcraft</a> es una compañia de servicios en Internet que lleva más de 20 años realizando un ranking del uso de los diferentes servidores web en Internet<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>
+                        . En él se pueden ver la evolución de las diferentes soluciones a lo largo del tiempo y también como quedan, más o menos, a día de hoy:
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:netcraft.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:netcraft.png"><img src="/_media/apuntes:netcraft.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 1:</span> <span class="captiontext">Ranking servidores web Febrero 2017</span></div></div>
+                </div>
+
+                <h2 class="sectionedit2" id="apache">Apache</h2>
+                <div class="level2">
+
+                    <p>
+                        <a href="/_detail/apuntes:apache.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:apache.png"><img src="/_media/apuntes:apache.png?w=350&amp;tok=3d9c63" class="mediacenter" alt="" width="350" /></a>
+                    </p>
+
+                </div>
+
+                <h3 class="sectionedit3" id="instalacion">Instalación</h3>
+                <div class="level3">
+
+                    <p>
+                        Puesto que en nuestro caso trabajamos con <em>Debian Linux</em> no necesitamos ir al sitio web del <a href="http://httpd.apache.org" class="urlextern" title="http://httpd.apache.org" rel="ugc nofollow">Proyecto Apache</a> para descargarnos el software. Simplemente, usando el gestor de paquetes, instalaremos el servidor web, su serie de utilidades y la documentación:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> apache2 apache2-utils</pre>
+
+                    <p>
+                        Una vez instalado todo el software, podremos echar un vistazo a la carpeta <code>/etc/apache2</code>, que es donde se almacena toda la configuración del servidor:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">ls</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2
+apache2.conf    conf-enabled  magic           mods-enabled  sites-available
+conf-available  envvars       mods-available  ports.conf    sites-enabled</pre>
+
+                    <p>
+                        La estructura de directorios queda de la siguiente manera:
+                    </p>
+                    <pre class="code bash"><span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>
+<span class="sy0">|</span>-- apache2.conf
+<span class="sy0">|</span>   <span class="sy0">`</span>-- ports.conf
+<span class="sy0">|</span>-- mods-enabled
+<span class="sy0">|</span>   <span class="sy0">|</span>-- <span class="sy0">*</span>.load
+<span class="sy0">|</span>   <span class="sy0">|</span>-- <span class="sy0">*</span>.conf
+<span class="sy0">|</span>-- conf-enabled
+<span class="sy0">|</span>   <span class="sy0">`</span>-- <span class="sy0">*</span>.conf
+<span class="sy0">`</span>-- sites-enabled
+    <span class="sy0">`</span>-- <span class="sy0">*</span>.conf</pre>
+
+                    <p>
+                        Y a continuación, echaremos un vistazo a cada uno de los ficheros/carpetas para ver cual es su cometido. Hay que tener en cuenta que la configuración de <em>Apache</em> está muy estructurada, por lo que es necesario saber en qué fichero/directorio corresponde configurar cada parte. Realmente es mucho más cómodo disponer de varios ficheros de configuración pequeños que de uno muy grande. Eso también hace que sea más modular a la hora de activar o desactivar según que característcas que iremos viendo más adelante.
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> <strong>apache2.conf</strong>: El fichero de configuración principal de <em>Apache</em>, donde se pueden realizar cambios generales</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>envvars</strong>: Contiene la configuración de las variables de entorno</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>ports.conf</strong>: Contiene la configuración de los puertos donde <em>Apache</em> escucha</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>conf-available</strong>: Contiene ficheros de configuración adicionales para diferentes aspectos de <em>Apache</em> o de aplicaciones web como <em>phpMyAdmin</em></div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>conf-enabled</strong>: Contiene una serie de enlaces simbólicos a los ficheros de configuración adicionales para activarlos. Puede activarse o desactivarse con los comandos <code>a2enconf</code> o <code>a2disconf</code></div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>mods-available</strong>: Contiene los módulos disponibles para usar con <em>Apache</em></div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>mods-enabled</strong>: Contiene enlaces simbólicos a aquellos módulos de <em>Apache</em> que se encuentran activados en este momento</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>sites-available</strong>: Contiene los ficheros de configuración de cada uno de los hosts virtuales configurados y disponibles (activos o no). Se crean utilizando los comandos <code>a2enmod</code> y <code>a2dismod</code> que más adelante explicaremos con más detalle</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>sites-enabled</strong>: Contiene una serie de enlaces simbólicos a los ficheros de configuración cuyos hosts virtuales se encuentran activos en este momento. Se crean a través de los comandos <code>a2ensite</code> y <code>a2dissite</code> que más adelante explicaremos con más detalle</div>
+                        </li>
+                    </ul>
+
+                    <p>
+                        <em>Apache</em> es lo que se conoce como un demonio, gestionado en <em>Debian</em> a través del comando <code>service</code>, de forma que podemos gestionar el servidor en función de las opciones que pasemos.
+                    </p>
+
+                </div>
+
+                <h5 id="comprobar_el_estado_del_servicio">Comprobar el estado del servicio</h5>
+                <div class="level5">
+
+                    <p>
+                        Si queremos saber cómo se encuentra nuestro servidor <em>Apache</em>, podemos ejecutar el siguiente comando y se mostrará un detalle de cuál es el estado del mismo. Resulta especialmente útil cuando, por alguna razón desconocida, éste está caído y no tenemos claro porqué. Con este comando podemos encontrar, normalmente, una descripción clara del problema.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service apache2 status
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded <span class="br0">&#40;</span><span class="sy0">/</span>lib<span class="sy0">/</span>systemd<span class="sy0">/</span>system<span class="sy0">/</span>apache2.service; enabled; vendor preset: enabled<span class="br0">&#41;</span>
+   Active: active <span class="br0">&#40;</span>running<span class="br0">&#41;</span> since Sun <span class="nu0">2017</span>-09-<span class="nu0">24</span> <span class="nu0">19</span>:<span class="nu0">25</span>:<span class="nu0">37</span> IST; 4h 54min ago
+  Process: <span class="nu0">17895</span> <span class="re2">ExecStop</span>=<span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span><span class="kw2">apachectl stop</span> <span class="br0">&#40;</span><span class="re2">code</span>=exited, <span class="re2">status</span>=<span class="nu0">0</span><span class="sy0">/</span>SUCCESS<span class="br0">&#41;</span>
+  Process: <span class="nu0">17902</span> <span class="re2">ExecStart</span>=<span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span><span class="kw2">apachectl start</span> <span class="br0">&#40;</span><span class="re2">code</span>=exited, <span class="re2">status</span>=<span class="nu0">0</span><span class="sy0">/</span>SUCCESS<span class="br0">&#41;</span>
+ Main PID: <span class="nu0">17906</span> <span class="br0">&#40;</span><span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apach<span class="br0">&#41;</span>
+    Tasks: <span class="nu0">6</span> <span class="br0">&#40;</span>limit: <span class="nu0">4915</span><span class="br0">&#41;</span>
+   Memory: 28.2M
+      CPU: 297ms
+   CGroup: <span class="sy0">/</span>system.slice<span class="sy0">/</span>apache2.service
+           ├─<span class="nu0">17906</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">17907</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">17908</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">17909</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">17910</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           └─<span class="nu0">17911</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+&nbsp;
+Sep <span class="nu0">24</span> <span class="nu0">19</span>:<span class="nu0">25</span>:<span class="nu0">37</span> zenbook systemd<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>: Starting The Apache HTTP Server...
+Sep <span class="nu0">24</span> <span class="nu0">19</span>:<span class="nu0">25</span>:<span class="nu0">37</span> zenbook <span class="kw2">apachectl</span><span class="br0">&#91;</span><span class="nu0">17902</span><span class="br0">&#93;</span>: AH00558: apache2: Could not reliably determine the server<span class="st_h">'s fully 
+Sep 24 19:25:37 zenbook systemd[1]: Started The Apache HTTP Server.</span></pre>
+
+                </div>
+
+                <h5 id="detener_el_servidor">Detener el servidor</h5>
+                <div class="level5">
+
+                    <p>
+                        Podemos detener el servidor, que permanecerá detenido hasta el siguiente reinicio o hasta que sea arrancado manualmente
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service apache2 stop</pre>
+
+                </div>
+
+                <h5 id="iniciar_el_servicio">Iniciar el servicio</h5>
+                <div class="level5">
+
+                    <p>
+                        Aunque se inicia automáticamente en cada arranque del equipo, quizás lo hayamos parado y queramos iniciarlo de nuevo
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service apache2 start</pre>
+
+                </div>
+
+                <h5 id="reiniciar_el_servidor">Reiniciar el servidor</h5>
+                <div class="level5">
+
+                    <p>
+                        Se trata de parar y arrancar el servicio con un sólo comando. Muy útil si hemos realizado algún cambio en la configuración. Hay que tener en cuenta que <em>Apache</em> lee la configuración una vez en el arranque y no la vuelve a leer hasta la siguiente vez que inicia. Así, para hacer efectivo el más mínimo cambio tendremos que reiniciarlo con este comando
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service apache2 restart</pre>
+
+                </div>
+
+                <h5 id="mas_informacion">Más información</h5>
+                <div class="level5">
+
+                    <p>
+                        También es posible algunos datos sobre su ejecución con el siguiente comando
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">apachectl status</span>
+                  Apache Server Status <span class="kw1">for</span> localhost <span class="br0">&#40;</span>via ::<span class="nu0">1</span><span class="br0">&#41;</span>
+&nbsp;
+   Server Version: Apache<span class="sy0">/</span>2.4.25 <span class="br0">&#40;</span>Debian<span class="br0">&#41;</span> mod_perl<span class="sy0">/</span>2.0.10 Perl<span class="sy0">/</span>v5.24.1
+&nbsp;
+   Server MPM: prefork
+&nbsp;
+   Server Built: <span class="nu0">2017</span>-07-18T18:<span class="nu0">37</span>:<span class="nu0">33</span>
+&nbsp;
+     <span class="re5">----------------------------------------------------------------------</span>
+&nbsp;
+   Current Time: Monday, <span class="nu0">25</span>-Sep-<span class="nu0">2017</span> 00:<span class="nu0">24</span>:09 IST
+&nbsp;
+   Restart Time: Monday, <span class="nu0">25</span>-Sep-<span class="nu0">2017</span> 00:<span class="nu0">21</span>:<span class="nu0">47</span> IST
+&nbsp;
+   Parent Server Config. Generation: <span class="nu0">1</span>
+&nbsp;
+   Parent Server MPM Generation: <span class="nu0">0</span>
+&nbsp;
+   Server uptime: <span class="nu0">2</span> minutes <span class="nu0">21</span> seconds
+&nbsp;
+   Server load: <span class="nu0">2.08</span> <span class="nu0">3.37</span> <span class="nu0">2.45</span>
+&nbsp;
+   Total accesses: <span class="nu0">1</span> - Total Traffic: <span class="nu0">1</span> kB
+&nbsp;
+   CPU Usage: u0 s0 cu0 cs0
+&nbsp;
+   .00709 requests<span class="sy0">/</span>sec - <span class="nu0">7</span> B<span class="sy0">/</span>second - <span class="nu0">1024</span> B<span class="sy0">/</span>request
+&nbsp;
+   <span class="nu0">1</span> requests currently being processed, <span class="nu0">6</span> idle workers
+&nbsp;
+ ___W___.........................................................
+ ................................................................
+ ......................
+&nbsp;
+   Scoreboard Key:
+   <span class="st0">&quot;_&quot;</span> Waiting <span class="kw1">for</span> Connection, <span class="st0">&quot;S&quot;</span> Starting up, <span class="st0">&quot;R&quot;</span> Reading Request,
+   <span class="st0">&quot;W&quot;</span> Sending Reply, <span class="st0">&quot;K&quot;</span> Keepalive <span class="br0">&#40;</span><span class="kw3">read</span><span class="br0">&#41;</span>, <span class="st0">&quot;D&quot;</span> DNS Lookup,
+   <span class="st0">&quot;C&quot;</span> Closing connection, <span class="st0">&quot;L&quot;</span> Logging, <span class="st0">&quot;G&quot;</span> Gracefully finishing,
+   <span class="st0">&quot;I&quot;</span> Idle cleanup of worker, <span class="st0">&quot;.&quot;</span> Open slot with no current process</pre>
+
+                    <p>
+                        Y por último, si queremos conocer la versión del servidor que tenemos instalada, podemos hacerlo con el siguiente comando
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>apache2 <span class="re5">-v</span>
+Server version: Apache<span class="sy0">/</span>2.4.25 <span class="br0">&#40;</span>Debian<span class="br0">&#41;</span>
+Server built:   <span class="nu0">2017</span>-07-18T18:<span class="nu0">37</span>:<span class="nu0">33</span></pre>
+
+                </div>
+
+                <h3 class="sectionedit4" id="configuracion">Configuración</h3>
+                <div class="level3">
+
+                </div>
+
+                <h4 id="configuracion_principal">Configuración principal</h4>
+                <div class="level4">
+<pre class="code bash"><span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>
+<span class="sy0">|</span>-- apache2.conf
+<span class="sy0">|</span>   <span class="sy0">`</span>-- ports.conf
+<span class="sy0">|</span>-- mods-enabled
+<span class="sy0">|</span>   <span class="sy0">|</span>-- <span class="sy0">*</span>.load
+<span class="sy0">|</span>   <span class="sy0">|</span>-- <span class="sy0">*</span>.conf
+<span class="sy0">|</span>-- conf-enabled
+<span class="sy0">|</span>   <span class="sy0">`</span>-- <span class="sy0">*</span>.conf
+<span class="sy0">`</span>-- sites-enabled
+    <span class="sy0">`</span>-- <span class="sy0">*</span>.conf</pre>
+
+                </div>
+
+                <h4 id="apache2conf">apache2.conf</h4>
+                <div class="level4">
+
+                    <p>
+                        <code>apache2.conf</code> es el fichero de configuración principal. Actualmente hay directivas generales de funcionamiento del servidor. Sólo se comentarán las más utilizadas puesto que algunas raras veces se modifican.
+                    </p>
+
+                    <p>
+                        En versiones anteriores, este fichero, aparecían opciones interesantes como puertos donde escucha el servidor, configuración del sitio principal, de los módulos habilitados (o no) y los hosts virtuales. Actualmente todas esas configuraciones han sido trasladadas a ficheros de configuración específicos, por lo que en el fichero general quedan pocas opciones interesantes que habitualmente se modifiquen.
+                    </p>
+                    <pre class="code apache">. . .
+&lt;<span class="kw3">Directory</span> /var/www/&gt;
+    <span class="kw1">Options</span> <span class="kw2">Indexes</span> <span class="kw2">FollowSymlinks</span>
+    <span class="kw1">AllowOverride</span> <span class="kw2">None</span>
+    <span class="kw1">Require</span> <span class="kw2">all</span> granted
+&lt;/<span class="kw3">Directory</span>&gt;
+. . .</pre>
+                    <pre class="code apache">. . .
+<span class="kw1">AccessFileName</span> .htaccess
+. . .</pre>
+                    <pre class="code apache">. . .
+<span class="kw1">Include</span> ports.conf
+. . .</pre>
+
+                    <p>
+                        <a href="https://www.svennd.be/keepalive-on-or-off-apache-tuning/" class="urlextern" title="https://www.svennd.be/keepalive-on-or-off-apache-tuning/" rel="ugc nofollow">KeeAlive On/Off</a>
+                    </p>
+                    <pre class="code apache">. . .
+<span class="kw1">KeepAlive</span> <span class="kw2">On</span>
+. . .</pre>
+
+                </div>
+
+                <h4 id="portsconf">ports.conf</h4>
+                <div class="level4">
+
+                    <p>
+                        En este fichero de configuración se establecen los puertos en los que escucha <em>Apache</em>. Puesto que es algo muy estándar no es habitual modificar el fichero, quizás para configurar el soporte para <em>HTTPS</em> como haremos más adelante.
+                    </p>
+                    <pre class="code apache"><span class="co1"># If you just change the port or add more ports here, you will likely also</span>
+<span class="co1"># have to change the VirtualHost statement in</span>
+<span class="co1"># /etc/apache2/sites-enabled/000-default.conf</span>
+&nbsp;
+<span class="kw1">Listen</span> <span class="nu0">80</span>
+&nbsp;
+&lt;<span class="kw3">IfModule</span> ssl_module&gt;
+	<span class="kw1">Listen</span> <span class="nu0">443</span>
+&lt;/<span class="kw3">IfModule</span>&gt;
+&nbsp;
+&lt;<span class="kw3">IfModule</span> mod_gnutls.c&gt;
+	<span class="kw1">Listen</span> <span class="nu0">443</span>
+&lt;/<span class="kw3">IfModule</span>&gt;</pre>
+
+                </div>
+
+                <h4 id="sites-available_enabled">sites-available/enabled</h4>
+                <div class="level4">
+
+                    <p>
+                        En estas dos carpetas se almacenan los ficheros de configuración de los hosts virtuales. En <code>sites-available</code> se crean los ficheros de configuración (estén o no activos) y aquellos que queremos que estén activos se vínculan con la carpeta <code>sites-enabled</code> para que se tenga en cuenta su configuración, ya que <em>Apache</em> sólo carga los que se encuentran en esta última carpeta.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">ls</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>sites-available
+000-default.conf default-ssl.conf</pre>
+
+                    <p>
+                        En este caso sólo nos encontramos con la configuración del sitio principal y tal como <em>Apache</em> lo prepara con la instalación por defecto. Más adelante, veremos como configurar el sitio principal y el resto de hosts virtuales cuando lo necesitemos.
+                    </p>
+                    <dl class="file">
+                        <dt><a href="/_export/code/apuntes:servidores_web?codeblock=16" title="Download Snippet" class="mediafile mf_conf">000-default.conf</a></dt>
+                        <dd><pre class="code file apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    <span class="co1"># The ServerName directive sets the request scheme, hostname and port that</span>
+    <span class="co1"># the server uses to identify itself. This is used when creating</span>
+    <span class="co1"># redirection URLs. In the context of virtual hosts, the ServerName</span>
+    <span class="co1"># specifies what hostname must appear in the request's Host: header to</span>
+    <span class="co1"># match this virtual host. For the default virtual host (this file) this</span>
+    <span class="co1"># value is not decisive as it is used as a last resort host regardless.</span>
+    <span class="co1"># However, you must set it for any further virtual host explicitly.</span>
+    <span class="co1">#ServerName www.example.com</span>
+&nbsp;
+    <span class="kw1">ServerAdmin</span> webmaster@localhost
+    <span class="kw1">DocumentRoot</span> /var/www/html
+&nbsp;
+    <span class="co1"># Available loglevels: trace8, ..., trace1, debug, info, notice, warn,</span>
+    <span class="co1"># error, crit, alert, emerg.</span>
+    <span class="co1"># It is also possible to configure the loglevel for particular</span>
+    <span class="co1"># modules, e.g.</span>
+    <span class="co1">#LogLevel info ssl:warn</span>
+&nbsp;
+    <span class="kw1">ErrorLog</span> ${APACHE_LOG_DIR}/error.log
+    <span class="kw1">CustomLog</span> ${APACHE_LOG_DIR}/access.log combined
+&nbsp;
+    <span class="co1"># For most configuration files from conf-available/, which are</span>
+    <span class="co1"># enabled or disabled at a global level, it is possible to</span>
+    <span class="co1"># include a line for only one particular virtual host. For example the</span>
+    <span class="co1"># following line enables the CGI configuration for this host only</span>
+    <span class="co1"># after it has been globally disabled with &quot;a2disconf&quot;.</span>
+    <span class="co1">#Include conf-available/serve-cgi-bin.conf</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+                        </dd></dl>
+
+                    <p>
+                        En el anterior fichero de configuración del sitio principal se pueden ver una serie de directivas muy importantes:
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> <code>ServerName</code>: Aunque se encuentra comentada, se utiliza para definir el dominio de Internet para el que se configura este sitio. Puesto que ahora estamos realizando pruebas en nuestro propio equipo no tendría sentido habilitarlo, puesto que no estamos dando servicio a ningún dominio real. Más adelante veremos como <em>engañar</em> al equipo y configuraremos al completo un sitio de <em>Apache</em> para ver cómo funciona totalmente esta directiva</div>
+                        </li>
+                        <li class="level1"><div class="li"> <code>ServerAdmin</code>: Sirve para definir la dirección de correo del administrador del servidor web. En caso de error se mostrará al usuario y será a quién deba dirigirse para notificar cualquier incidencia</div>
+                        </li>
+                        <li class="level1"><div class="li"> <code>DocumentRoot</code>: Es muy importante puesto que define la ruta del equipo donde se encuentran todos los ficheros que se están sirviendo en cada momento a través del sitio web que define este fichero. Todo lo que haya en este directorio y por debajo de él está, en principio, siendo ofrecido a través de la web. </div>
+                        </li>
+                        <li class="level1"><div class="li"> <code>ErrorLog</code>: Define en que fichero (como texto) se van a ir registrando todos los errores que se produzcan</div>
+                        </li>
+                        <li class="level1"><div class="li"> <code>CustomLog</code>: Define un fichero donde se registra toda la información posible (dependiendo de cómo se configure) sobre las visitas que llegan al sitio web y sus usuarios. Es la información que, más adelante, nos podrá permitir sacar las estadísticas de visitas de nuestra página web</div>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Y aqui podemos ver como la configuración del sitio principal tiene un vínculo en <code>sites-enabled</code> para que <em>Apache</em> cargue la configuración y el sitio esté operativo.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">ls</span> <span class="re5">-la</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>sites-enabled
+total <span class="nu0">8</span>
+drwxr-xr-x <span class="nu0">2</span> root root <span class="nu0">4096</span> Nov <span class="nu0">19</span>  <span class="nu0">2015</span> .
+drwxr-xr-x <span class="nu0">8</span> root root <span class="nu0">4096</span> Sep <span class="nu0">22</span> <span class="nu0">10</span>:<span class="nu0">26</span> ..
+lrwxrwxrwx <span class="nu0">1</span> root root   <span class="nu0">35</span> Nov <span class="nu0">19</span>  <span class="nu0">2015</span> 000-default.conf -<span class="sy0">&gt;</span> ..<span class="sy0">/</span>sites-available<span class="sy0">/</span>000-default.conf</pre>
+
+                </div>
+
+                <h3 class="sectionedit5" id="como_crear_un_hosting_compartido_creacion_de_hosts_virtuales">Cómo crear un hosting compartido (Creación de hosts virtuales)</h3>
+                <div class="level3">
+
+                    <p>
+                        El hosting compartido consiste en el mantenimiento de diferentes sitios web (independientes entre ellos) en el mismo equipo, compartiendo recursos. Es la forma más económica puesto que, al poder compartir los recursos, es posible crear y mantener un gran número de éstos en el mismo equipo.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">vim</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>sites-available<span class="sy0">/</span>misitio.com.conf</pre>
+                    <dl class="file">
+                        <dt><a href="/_export/code/apuntes:servidores_web?codeblock=19" title="Download Snippet" class="mediafile mf_conf">misitio.com.conf</a></dt>
+                        <dd><pre class="code file apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    <span class="kw1">ServerAdmin</span> webmaster@misitio.com
+    <span class="kw1">DocumentRoot</span> <span class="st0">&quot;/var/www/html/misitio.com&quot;</span>
+    <span class="kw1">ServerName</span> misitio.com
+    <span class="kw1">ServerAlias</span> www.misitio.com
+    <span class="kw1">ErrorLog</span> <span class="st0">&quot;misitio.com-error.log&quot;</span>
+    <span class="kw1">CustomLog</span> <span class="st0">&quot;misitio.com-access.log&quot;</span> combined
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+                        </dd></dl>
+
+                    <p>
+                        Cuando hayamos terminado de configurar el nuevo host virtual, podemos activarlo utilizando el comando <code>a2ensite</code> (<strong>a</strong>pache<strong>2</strong> <strong>en</strong>able <strong>site</strong>). Automáticamente se creará un enlace simbólico con la configuración del sitio de <code>sites-available</code> en <code>sites-enabled</code>:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> a2ensite misitio.com
+Enabling site misitio.com.
+To activate the new configuration, you need to run:
+  systemctl reload apache2</pre>
+
+                    <p>
+                        Basicamente podríamos haber hecho lo mismo con el siguiente comando:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">ln</span> <span class="re5">-s</span> ..<span class="sy0">/</span>sites-avaiable<span class="sy0">/</span>misitio.com.conf <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>sites-enabled<span class="sy0">/</span>misitio.com.conf </pre>
+
+                    <p>
+                        En cualquier caso tendremos que reiniciar el servicio de <em>Apache</em> para que se active la nueva configuración
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>service apache2 restart</pre>
+
+                    <p>
+                        También podemos desactivar un host virtual con el comando <code>a2dissite</code> (<strong>a</strong>pache<strong>2</strong> <strong>dis</strong>able <strong>site</strong>). El sitio permanecerá desactivado hasta que lo volvamos a activar con <code>a2ensite</code>
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>a2dissite misitio.com
+Site misitio.com disabled.
+To activate the new configuration, you need to run:
+  systemctl reload apache2</pre>
+
+                    <p>
+                        En estos casos, donde empezamos a tener numerosos ficheros de configuración, es donde resulta útil el comando <code>service apache2 status</code> ya que, en caso de que tengamos algún error que impida arrancar el servicio, nos dará la información necesaria para encontrarlo. En el siguiente ejemplo he escrito mal a idea un fichero de configuración de un sitio virtual. Al arrancarlo con <code>a2ensite</code> me ha dado un error y con <code>service apache2 status</code> visualizo toda la información y puedo ver cuál es el motivo del error.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>service apache2 status
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded <span class="br0">&#40;</span><span class="sy0">/</span>lib<span class="sy0">/</span>systemd<span class="sy0">/</span>system<span class="sy0">/</span>apache2.service; enabled; vendor preset: enabled<span class="br0">&#41;</span>
+   Active: active <span class="br0">&#40;</span>running<span class="br0">&#41;</span> <span class="br0">&#40;</span>Result: exit-code<span class="br0">&#41;</span> since Mon <span class="nu0">2017</span>-09-<span class="nu0">25</span> <span class="nu0">19</span>:<span class="nu0">43</span>:<span class="nu0">40</span> IST; 38s ago
+  Process: <span class="nu0">31465</span> <span class="re2">ExecStop</span>=<span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span><span class="kw2">apachectl stop</span> <span class="br0">&#40;</span><span class="re2">code</span>=exited, <span class="re2">status</span>=<span class="nu0">0</span><span class="sy0">/</span>SUCCESS<span class="br0">&#41;</span>
+  Process: <span class="nu0">31607</span> <span class="re2">ExecReload</span>=<span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span><span class="kw2">apachectl graceful</span> <span class="br0">&#40;</span><span class="re2">code</span>=exited, <span class="re2">status</span>=<span class="nu0">1</span><span class="sy0">/</span>FAILURE<span class="br0">&#41;</span>
+  Process: <span class="nu0">31472</span> <span class="re2">ExecStart</span>=<span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span><span class="kw2">apachectl start</span> <span class="br0">&#40;</span><span class="re2">code</span>=exited, <span class="re2">status</span>=<span class="nu0">0</span><span class="sy0">/</span>SUCCESS<span class="br0">&#41;</span>
+ Main PID: <span class="nu0">31476</span> <span class="br0">&#40;</span><span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apach<span class="br0">&#41;</span>
+    Tasks: <span class="nu0">6</span> <span class="br0">&#40;</span>limit: <span class="nu0">4915</span><span class="br0">&#41;</span>
+   Memory: 28.0M
+      CPU: 354ms
+   CGroup: <span class="sy0">/</span>system.slice<span class="sy0">/</span>apache2.service
+           ├─<span class="nu0">31476</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">31477</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">31478</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">31479</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           ├─<span class="nu0">31480</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+           └─<span class="nu0">31481</span> <span class="sy0">/</span>usr<span class="sy0">/</span>sbin<span class="sy0">/</span>apache2 <span class="re5">-k</span> start
+&nbsp;
+Sep <span class="nu0">25</span> <span class="nu0">19</span>:<span class="nu0">43</span>:<span class="nu0">40</span> zenbook systemd<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>: Starting The Apache HTTP Server...
+Sep <span class="nu0">25</span> <span class="nu0">19</span>:<span class="nu0">43</span>:<span class="nu0">40</span> zenbook <span class="kw2">apachectl</span><span class="br0">&#91;</span><span class="nu0">31472</span><span class="br0">&#93;</span>: AH00558: apache2: Could not reliably determine the server<span class="st_h">'s fully 
+Sep 25 19:43:40 zenbook systemd[1]: Started The Apache HTTP Server.
+Sep 25 19:44:12 zenbook systemd[1]: Reloading The Apache HTTP Server.
+Sep 25 19:44:12 zenbook apachectl[31607]: AH00526: Syntax error on line 1 of /etc/apache2/sites-enabled/misi
+Sep 25 19:44:12 zenbook apachectl[31607]: &lt;VirtualHost&gt; directive missing closing '</span><span class="sy0">&gt;</span><span class="st_h">'
+Sep 25 19:44:12 zenbook apachectl[31607]: Action '</span>graceful<span class="st_h">' failed.
+Sep 25 19:44:12 zenbook apachectl[31607]: The Apache error log may have more information.
+Sep 25 19:44:12 zenbook systemd[1]: apache2.service: Control process exited, code=exited status=1
+Sep 25 19:44:12 zenbook systemd[1]: Reload failed for The Apache HTTP Server.</span></pre>
+
+                    <p>
+                        Si finalmente comprobamos que la configuración es correcta, nuestro host virtual estará funcionando correctamente. Si suponemos que nuestro servidor está corriendo en Internet y que además ya somos dueños del dominio (y éste apunta a nuestro equipo), los usuarios ya podrán empezar a visitar nuestra nueva web <strong><em>misitio.com</em></strong>.
+                    </p>
+
+                    <p>
+                        En nuestro caso, en clase, vamos a decirle a nuestro ordenador que el dominio <em>misitio.com</em> apunte a nuestro propio equipo, asi podremos comprobar que todo funciona. Para ello editaremos el fichero <code>/etc/hosts</code> que funciona como <abbr title="Domain Name System">DNS</abbr> local
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">vim</span> <span class="sy0">/</span>etc<span class="sy0">/</span>hosts</pre>
+
+                    <p>
+                        Y añadimos la IP que queremos asignar al dominio <em>misitio.com</em> (en nuestro caso nuestro propio equipo, 127.0.0.1)
+                    </p>
+                    <pre class="code apache">127.0.0.1	localhost
+127.0.1.1	zenbook
+127.0.0.1       misitio.com
+&nbsp;
+<span class="co1"># The following lines are desirable for IPv6 capable hosts</span>
+::<span class="nu0">1</span>     localhost ip6-localhost ip6-loopback
+ff02::<span class="nu0">1</span> ip6-allnodes
+ff02::<span class="nu0">2</span> ip6-allrouters</pre>
+
+                    <p>
+                        Simplemente haciendo ping contra el dominio podemos ver que responde nuestro propio equipo, por lo que todo funciona correctamente
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">ping</span> misitio.com
+PING misitio.com <span class="br0">&#40;</span>127.0.0.1<span class="br0">&#41;</span> <span class="nu0">56</span><span class="br0">&#40;</span><span class="nu0">84</span><span class="br0">&#41;</span> bytes of data.
+<span class="nu0">64</span> bytes from localhost <span class="br0">&#40;</span>127.0.0.1<span class="br0">&#41;</span>: <span class="re2">icmp_seq</span>=<span class="nu0">1</span> <span class="re2">ttl</span>=<span class="nu0">64</span> <span class="re2">time</span>=<span class="nu0">0.026</span> ms
+<span class="nu0">64</span> bytes from localhost <span class="br0">&#40;</span>127.0.0.1<span class="br0">&#41;</span>: <span class="re2">icmp_seq</span>=<span class="nu0">2</span> <span class="re2">ttl</span>=<span class="nu0">64</span> <span class="re2">time</span>=<span class="nu0">0.029</span> ms
+<span class="nu0">64</span> bytes from localhost <span class="br0">&#40;</span>127.0.0.1<span class="br0">&#41;</span>: <span class="re2">icmp_seq</span>=<span class="nu0">3</span> <span class="re2">ttl</span>=<span class="nu0">64</span> <span class="re2">time</span>=<span class="nu0">0.030</span> ms</pre>
+
+                    <p>
+                        Preparamos ahora una web de bienvenida para el nuevo sitio web:
+                    </p>
+                    <dl class="file">
+                        <dt><a href="/_export/code/apuntes:servidores_web?codeblock=28" title="Download Snippet" class="mediafile mf_html">index.html</a></dt>
+                        <dd><pre class="code file html4strict"><span class="sc0">&lt;!DOCTYPE&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/html.html"><span class="kw2">html</span></a> <span class="kw3">lang</span><span class="sy0">=</span><span class="st0">&quot;es&quot;</span>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+    <span class="sc2">&lt;<a href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<a href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>Bienvenido a misitio.com<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+<span class="sc2">&lt;<a href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+    <span class="sc2">&lt;<a href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>Estás en misitio.com<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/html.html"><span class="kw2">html</span></a>&gt;</span></pre>
+                        </dd></dl>
+
+                    <p>
+                        Y asi ahora lo visitamos podremos ver que la página que visitamos es diferente en función de si vamos al host virtual <code>misitio.com</code> . . .
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>links http:<span class="sy0">//</span>misitio.com</pre>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:misitiocom.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:misitiocom.png"><img src="/_media/apuntes:misitiocom.png?w=400&amp;tok=9e4819" class="mediacenter" alt="" width="400" /></a>
+                        <div class="caption"><span class="captionno">Figure 2:</span> <span class="captiontext">misitio.com</span></div></div>
+                    <p>
+                        . . . o al sitio principal (con <code><a href="http://localhost" class="urlextern" title="http://localhost" rel="ugc nofollow">http://localhost</a></code>)
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>links http:<span class="sy0">//</span>localhost</pre>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:localhost.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:localhost.png"><img src="/_media/apuntes:localhost.png?w=400&amp;tok=b414a2" class="mediacenter" alt="" width="400" /></a>
+                        <div class="caption"><span class="captionno">Figure 3:</span> <span class="captiontext">Sitio principal</span></div></div>
+                    <p>
+                        Y como curiosidad, podemos ver como las visitas realizadas al host virtual se van registrado en su correspondiente fichero <em>log</em>, tal y como habíamos configurado antes:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">tail</span> <span class="sy0">/</span>var<span class="sy0">/</span>log<span class="sy0">/</span>apache2<span class="sy0">/</span>misitio.com-access.log
+127.0.0.1 - - <span class="br0">&#91;</span><span class="nu0">22</span><span class="sy0">/</span>Sep<span class="sy0">/</span><span class="nu0">2017</span>:<span class="nu0">11</span>:<span class="nu0">17</span>:<span class="nu0">36</span> +0100<span class="br0">&#93;</span> <span class="st0">&quot;GET / HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">449</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36 OPR/47.0.2631.80&quot;</span>
+127.0.0.1 - - <span class="br0">&#91;</span><span class="nu0">22</span><span class="sy0">/</span>Sep<span class="sy0">/</span><span class="nu0">2017</span>:<span class="nu0">11</span>:<span class="nu0">17</span>:<span class="nu0">51</span> +0100<span class="br0">&#93;</span> <span class="st0">&quot;GET / HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">464</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36 OPR/47.0.2631.80&quot;</span>
+127.0.0.1 - - <span class="br0">&#91;</span><span class="nu0">22</span><span class="sy0">/</span>Sep<span class="sy0">/</span><span class="nu0">2017</span>:<span class="nu0">11</span>:<span class="nu0">18</span>:<span class="nu0">39</span> +0100<span class="br0">&#93;</span> <span class="st0">&quot;GET / HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">485</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36 OPR/47.0.2631.80&quot;</span>
+127.0.0.1 - - <span class="br0">&#91;</span><span class="nu0">22</span><span class="sy0">/</span>Sep<span class="sy0">/</span><span class="nu0">2017</span>:<span class="nu0">11</span>:<span class="nu0">21</span>:<span class="nu0">54</span> +0100<span class="br0">&#93;</span> <span class="st0">&quot;GET / HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">485</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Links (2.14; Linux 4.9.0-3-amd64 x86_64; GNU C 6.3; text)&quot;</span>
+. . .</pre>
+
+                </div>
+
+                <h3 class="sectionedit6" id="instalacion_y_configuracion_de_modulos">Instalación y configuración de modulos</h3>
+                <div class="level3">
+
+                    <p>
+                        En esta parte veremos como extender la funcionalidad del servidor web <em>Apache</em> añadiendo y configurando algunos módulos que, aunque se deben de instalar manualmente a parte, empiezan a ser parte indispensable de este servidor:
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web#soporte_para_php" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">Soporte para lenguaje PHP</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web#soporte_para_python_wsgi" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">Soporte para Python</a> a través de WSGI</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web#autenticacion_http" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">Autenticación HTTP</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web#limitar_el_ancho_de_banda" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">Control del ancho de banda</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web#reescritura_de_urls" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">reescritura de URLS</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> Y también, aunque en el apartado de seguridad, como configurar <em>Apache</em> para <a href="/apuntes:servidores_web#configurar_ssl_tls_en_apache" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">conexiones seguras HTTPS</a></div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <h4 id="soporte_para_php">Soporte para PHP</h4>
+                <div class="level4">
+
+                    <p>
+                        Para instalar el soporte para PHP en <em>Apache</em>, lo primero que tenemos que hacer es instalar los paquetes para darle soporte. Podemos, por ejemplo, instalar los de PHP5 y los de la recién liberada versión 7
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> php5 php7.0</pre>
+                    <blockquote><div class="no">
+                        Hay que tener en cuenta que la instalación del paquete de PHP 5 (<code>php5</code>) tiene como dependencia el paquete <code>libapache-mod-php5</code> que instala el módulo de apache para dar soporte a esta tecnología. El paquete para la versión 7 de PHP (<code>php7.0</code>) trae también como dependencia el módulo correspondiente para esta versión (<code>libapache-mod-php7.0</code>)</div></blockquote>
+
+                    <p>
+                        Si además queremos añadir soporte para Bases de Datos, tendremos que instalar a parte el SGBD que nos interese. En el caso de PHP el más utilizado es MySQL, por lo que instalaremos éste:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> mysql-server</pre>
+
+                    <p>
+                        Y también el soporte del lenguaje PHP para conectarse con <em>MySQL</em>:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> php5-mysql php7.0-mysql</pre>
+
+                    <p>
+                        Una vez instalado el soporte para PHP, la mejor forma de comprobar que todo funciona correctamente es invocar a la función <code>phpinfo()</code>, que nos proporciona información muy detallada sobre su instalación. Asi, podemos preparar un brevísimo script PHP con las siguientes líneas y copiarlo en el directorio del sitio principal (<code>/var/www/html</code>)
+                    </p>
+                    <pre class="code php"><span class="kw2">&lt;?php</span>
+<a href="http://www.php.net/phpinfo"><span class="kw3">phpinfo</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+                    <p>
+                        Y al cargar dicho script obtendremos una web con varias tablas donde se detalla en profundidad toda la confguración de PHP para nuestro servidor <em>Apache</em>:
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:phpinfo.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:phpinfo.png"><img src="/_media/apuntes:phpinfo.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 4:</span> <span class="captiontext">Información sobre la instalación de PHP</span></div></div>
+                    <p>
+                        Resulta especialmente útil en el caso de que queramos extender extensiones al lenguaje, puesto que es la manera más efectiva de saber si dichas librerías se encuentran ya instaladas y activas. Algunas de las librerías más utilizadas son las de gráficos (<code>gd</code> y <code>imagick</code>) y una librería para cachear y mejorar así el rendimiento (<code>apcu</code>):
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> php-gd php-imagick php-apcu</pre>
+
+                    <p>
+                        Además, en el caso de que hayamos optado por instalar PHP junto con MySQL, puede resultar de mucha utilidad instalar un gestor para el SGBD, en este caso como aplicación web. Se trata de <em>phpMyAdmin</em>, conocida aplicación web para la gestión de Bases de Datos <em>MySQL</em>.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> phpmyadmin</pre>
+
+                </div>
+
+                <h4 id="soporte_para_python_wsgi">Soporte para Python (WSGI)</h4>
+                <div class="level4">
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> libapache2-mod-wsgi-py libapache2-mod-wsgi-py3</pre>
+                    <pre class="code apache">WSGIScriptAlias / /path/to/mysite.com/mysite/wsgi.py
+WSGIPythonHome /path/to/venv
+WSGIPythonPath /path/to/mysite.com
+&nbsp;
+&lt;<span class="kw3">Directory</span> /path/to/mysite.com/mysite&gt;
+&lt;<span class="kw3">Files</span> wsgi.py&gt;
+<span class="kw1">Require</span> <span class="kw2">all</span> granted
+&lt;/<span class="kw3">Files</span>&gt;
+&lt;/<span class="kw3">Directory</span>&gt;</pre>
+
+                </div>
+
+                <h4 id="autenticacion_http">Autenticación HTTP</h4>
+                <div class="level4">
+
+                    <p>
+                        La autenticación HTTP es un método por el cual podemos proteger carpetas dentro de nuestro servidor web (en este caso con <em>Apache</em>).
+                    </p>
+
+                    <p>
+                        Lo primero que tendremos que tener instalado es el paquete <code>apache2-utils</code>
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> apache2-utils</pre>
+
+                    <p>
+                        Que como podemos observar en la descripción detallada del paquete, contiene una serie de utilidades para, entre otras cosas, manipular archivos de autenticación (con el comando <code>htpasswd</code>) que serán los ficheros a través de los cuales configuraremos el acceso (medianete usuario/contraseña) a esas carpetas protegidas dentro de nuestro servidor web.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">apt-cache show</span> apache2-utils
+Package: apache2-utils
+Source: apache2
+Version: 2.4.25-<span class="nu0">3</span>+deb9u2
+Installed-Size: <span class="nu0">377</span>
+Maintainer: Debian Apache Maintainers <span class="sy0">&lt;</span>debian-apache<span class="sy0">@</span>lists.debian.org<span class="sy0">&gt;</span>
+Architecture: amd64
+Depends: libapr1 <span class="br0">&#40;</span><span class="sy0">&gt;</span>= 1.4.8-<span class="nu0">2</span>~<span class="br0">&#41;</span>, libaprutil1 <span class="br0">&#40;</span><span class="sy0">&gt;</span>= 1.5.0<span class="br0">&#41;</span>, libc6 <span class="br0">&#40;</span><span class="sy0">&gt;</span>= <span class="nu0">2.14</span><span class="br0">&#41;</span>, libssl1.0.2 <span class="br0">&#40;</span><span class="sy0">&gt;</span>= 1.0.2d<span class="br0">&#41;</span>
+Description-en: Apache HTTP Server <span class="br0">&#40;</span>utility programs <span class="kw1">for</span> web servers<span class="br0">&#41;</span>
+ Provides some add-on programs useful <span class="kw1">for</span> any web server.  These include:
+  - ab <span class="br0">&#40;</span>Apache benchmark tool<span class="br0">&#41;</span>
+  - fcgistarter <span class="br0">&#40;</span>Start a FastCGI program<span class="br0">&#41;</span>
+  - logresolve <span class="br0">&#40;</span>Resolve IP addresses to hostnames <span class="kw1">in</span> logfiles<span class="br0">&#41;</span>
+  - htpasswd <span class="br0">&#40;</span>Manipulate basic authentication files<span class="br0">&#41;</span>
+  - htdigest <span class="br0">&#40;</span>Manipulate digest authentication files<span class="br0">&#41;</span>
+  - htdbm <span class="br0">&#40;</span>Manipulate basic authentication files <span class="kw1">in</span> DBM format, using APR<span class="br0">&#41;</span>
+  - htcacheclean <span class="br0">&#40;</span>Clean up the disk cache<span class="br0">&#41;</span>
+  - rotatelogs <span class="br0">&#40;</span>Periodically stop writing to a logfile and open a new one<span class="br0">&#41;</span>
+  - split-logfile <span class="br0">&#40;</span>Split a single log including multiple vhosts<span class="br0">&#41;</span>
+  - checkgid <span class="br0">&#40;</span>Checks whether the <span class="kw3">caller</span> can setgid to the specified group<span class="br0">&#41;</span>
+  - check_forensic <span class="br0">&#40;</span>Extract mod_log_forensic output from Apache log files<span class="br0">&#41;</span>
+  - httxt2dbm <span class="br0">&#40;</span>Generate dbm files <span class="kw1">for</span> use with RewriteMap<span class="br0">&#41;</span>
+Description-md5: f1e2440381fa90571f125990da6a52fc
+Homepage: http:<span class="sy0">//</span>httpd.apache.org<span class="sy0">/</span>
+Multi-Arch: foreign
+Section: httpd
+Priority: optional
+Filename: pool<span class="sy0">/</span>updates<span class="sy0">/</span>main<span class="sy0">/</span>a<span class="sy0">/</span>apache2<span class="sy0">/</span>apache2-utils_2.4.25-<span class="nu0">3</span>+deb9u2_amd64.deb
+Size: <span class="nu0">216528</span>
+MD5sum: b509377ca37975d449a1595bcd416327
+SHA1: 4eeb5e76e8ac1ed12c6fdcb9d2f0c0468a54b50e
+SHA256: 9562aacafb42cb6b08acbcc479487e9556fadcb180e7b6743696f1d9b0a6d5b4</pre>
+
+                    <p>
+                        Una vez instalado <code>apache2-utils</code>, estaremos en disposición de ejecutar el comando <code>htpasswd</code> que se utiliza tanto para crear el fichero por primera vez y añadir un usuario a la zona protegida que vamos a crear, como para añadir otros usuarios más adelante.
+                    </p>
+
+                    <p>
+                        Creamos primero un usuario <code>santi</code> con su contraseña y almacenamos el fichero en la ruta de configuración de nuestro servidor web. Como el fichero todavía no existe utilizamos la opción <code>-c</code>
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> htpasswd <span class="re5">-c</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>.htpasswd santi
+New password: 
+Re-type new password: 
+Adding password <span class="kw1">for</span> user santi</pre>
+
+                    <p>
+                        Y añadimos un segundo usuario. En este caso el fichero ya existe y no es necesario especificar ninguna opción adicional al ejecutarlo.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> htpasswd <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>.htpasswd otro_usuario
+New password: 
+Re-type new password: 
+Adding password <span class="kw1">for</span> user otro_usuario</pre>
+
+                    <p>
+                        Si echamos un vistazo al fichero, veremos como quedan almacenados usuario / contraseña, y ésta última cifrada.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">cat</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>.htpasswd
+<span class="co4">santi:$</span>apr1<span class="re1">$mDMINEK5</span><span class="re4">$3</span>4dXLMYERhHz7QEmhtK.x<span class="sy0">/</span>
+<span class="co4">otro_usuario:$</span>apr1<span class="re1">$tYxVwhYM</span><span class="re4">$8</span>guRCfIs5aIJovO8YazTL<span class="sy0">/</span></pre>
+
+                    <p>
+                        A continuación, asignamos la propiedad del fichero y el grupo al usuario y grupo sobre el que se ejecuta <em>Apache</em> en nuestro Linux, <code>www-data</code>
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">chown</span> www-data:www-data <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>.htpasswd</pre>
+
+                    <p>
+                        Puesto que teníamos ya creados algunos hosts virtuales, vamos a seleccionar uno de ellos para proteger dentro del mismo una de las carpetas. En este caso teníamos el sitio <code>misitio.com</code> ya creado como aparece aqui debajo:
+                    </p>
+                    <pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    <span class="kw1">ServerAdmin</span> webmaster@misitio.com
+    <span class="kw1">DocumentRoot</span> <span class="st0">&quot;/var/www/html/misitio.com&quot;</span>
+    <span class="kw1">ServerName</span> misitio.com
+    <span class="kw1">ServerAlias</span> www.misitio.com
+    <span class="kw1">ErrorLog</span> <span class="st0">&quot;misitio.com-error.log&quot;</span>
+    <span class="kw1">CustomLog</span> <span class="st0">&quot;misitio.com-access.log&quot;</span> combined
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+
+                    <p>
+                        Vamos a añadir la directiva <code>Directory</code> como aparece a continuación para proteger un directorio al que llamaremos <code>usuarios</code> donde suponemos que hay cierta información a la que no todo el mundo debe acceder. Configuraremos dicha zona para indicar que es una zona restringida y que sólo los usuarios que están especificados en ese fichero pueden entrar
+                    </p>
+                    <pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    <span class="kw1">ServerAdmin</span> webmaster@misitio.com
+    <span class="kw1">DocumentRoot</span> <span class="st0">&quot;/var/www/html/misitio.com&quot;</span>
+    <span class="kw1">ServerName</span> misitio.com
+    <span class="kw1">ServerAlias</span> www.misitio.com
+    <span class="kw1">ErrorLog</span> <span class="st0">&quot;logs/misitio.com-error.log&quot;</span>
+    <span class="kw1">CustomLog</span> <span class="st0">&quot;logs/misitio.com-access.log&quot;</span> combined
+&nbsp;
+    &lt;<span class="kw3">Directory</span> <span class="st0">&quot;/var/www/html/misitio.com/usuarios&quot;</span>&gt;
+        <span class="kw1">AuthType</span> Basic
+        <span class="kw1">AuthName</span> <span class="st0">&quot;Acceso Restringido a Usuarios&quot;</span>
+        <span class="kw1">AuthUserFile</span> /etc/apache2/.htpasswd
+        <span class="kw1">Require</span> valid-<span class="kw1">user</span>
+    &lt;/<span class="kw3">Directory</span>&gt;
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+
+                    <p>
+                        Donde:
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> <strong>AuthType Basic</strong>: Define el tipo de autenticación</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>AuthName</strong>: Define el mensaje que se mostrará al usuario cuando se le solicite el usuario y contraseña para acceder</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>AuthUserFile</strong>: Se indica la ruta al fichero que hemos creado (tal y como se explica más arriba) con los usuarios/contraseña que tienen permitido el acceso</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>Require</strong>: Indica que sólo se podrá acceder con un usuario válido. Si sólo queremos que se pueda acceder con un único usuario podemos indicar <code>Require user santi</code> si sólo queremos que el usuario <code>santi</code> pueda acceder a esa carpeta.</div>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Para terminar, reiniciamos el servicio de Apache:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service apache2 restart</pre>
+
+                    <p>
+                        Ahora podemos probar a acceder a la <abbr title="Uniform Resource Locator">URL</abbr> <code><a href="http://misitio.com/usuarios" class="urlextern" title="http://misitio.com/usuarios" rel="ugc nofollow">http://misitio.com/usuarios</a></code> y veremos como aparece una ventana al estilo <em>popup</em> solicitando que nos identificamos mediante un usuario y una contraseña.
+                    </p>
+
+                </div>
+
+                <h4 id="autenticacion_http_con_htaccess">Autenticación HTTP con .htaccess</h4>
+                <div class="level4">
+
+                    <p>
+                        También es posible, y quizás más cómodo, activar y configurar la autenticación <em>HTTP</em> creado un fichero <em>.htaccess</em> de forma que podamos almacenarlo dentro de la carpeta del sitio que queremos proteger.
+                    </p>
+
+                    <p>
+                        Antes de nada tenemos que modificar la configuración general de Apache para permitir que las propiedades sobre el directorio raíz puedan ser modificadas. Cambiaremos el valor <code>AllowOverride All</code> para permitir dichas modificaciones. Así, la política sobre dicho directorio podrá ser diferente a la establecida en la carpeta si asi se define con algún fichero <em>.htaccess</em>
+                    </p>
+                    <dl class="file">
+                        <dt><a href="/_export/code/apuntes:servidores_web?codeblock=49" title="Download Snippet" class="mediafile mf_conf">/etc/apache2/apache2.conf</a></dt>
+                        <dd><pre class="code file apache">. . .
+&lt;<span class="kw3">Directory</span> /var/www/&gt;
+    <span class="kw1">Options</span> <span class="kw2">Indexes</span> <span class="kw2">FollowSymLinks</span>
+    <span class="kw1">AllowOverride</span> <span class="kw2">All</span>
+    <span class="kw1">Require</span> <span class="kw2">all</span> granted
+&lt;/<span class="kw3">Directory</span>&gt;
+. . .</pre>
+                        </dd></dl>
+
+                    <p>
+                        A continuación, sobre la carpeta que queremos proteger con contraseña, creamos un fichero <em>.htaccess</em> con el siguiente contenido:
+                    </p>
+                    <dl class="file">
+                        <dt><a href="/_export/code/apuntes:servidores_web?codeblock=50" title="Download Snippet" class="mediafile mf_htaccess">/var/www/html/misitio.com/usuarios/.htaccess</a></dt>
+                        <dd><pre class="code file apache"><span class="kw1">AuthType</span> Basic
+<span class="kw1">AuthName</span> <span class="st0">&quot;Acceso Restringido a Usuarios&quot;</span>
+<span class="kw1">AuthUserFile</span> /etc/apache2/.htpasswd
+<span class="kw1">Require</span> valid-<span class="kw1">user</span> </pre>
+                        </dd></dl>
+
+                    <p>
+                        Y, para terminar, tendremos que reiniciar el servicio de Apache:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service apache2 restart</pre>
+
+                </div>
+
+                <h4 id="impedir_que_se_liste_un_directorio">Impedir que se liste un directorio</h4>
+                <div class="level4">
+
+                    <p>
+                        Una vez que ya hemos modificado la configuración de Apache para que permita que las propiedades sobre el directorio raíz y sus subdirectorios puedan ser modificadas (ver punto anterior), podemos también impedir, por ejemplo, que los ficheros de un directorio puedan ser listados por cualquier visitante. Basta con crear un fichero <code>.htaccess</code> y añadir la siguiente línea que indica que no puede listarse el directorio.
+                    </p>
+                    <pre class="code apache"><span class="kw1">Options</span> -<span class="kw2">Indexes</span></pre>
+
+                </div>
+
+                <h4 id="limitar_el_ancho_de_banda">Limitar el ancho de banda</h4>
+                <div class="level4">
+
+                    <p>
+                        Otro de los módulos de <em>Apache</em>, (bw, <strong>b</strong>and<strong>w</strong>ith), permite controlar el ancho de banda de los usuarios que se conectan a nuestro sitio web en función de numerosos parámetros. En este apartado veremos como instalarlo, activarlo y configurar un par de ejemplos:
+                    </p>
+
+                    <p>
+                        Para instalarlo, como siempre, con la herramienta <code>apt-get</code>:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> libapache2-mod-bw</pre>
+
+                    <p>
+                        Y ahora, tomando como ejemplo el sitio virtual creado en anteriores apartados, vamos a configurarlo para controlar el ancho de banda en todo el sitio, el máximo, el mínimo y el número de conexiones simultáneas por conexión (por usuario)
+                    </p>
+                    <pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    <span class="kw1">ServerAdmin</span> webmaster@misitio.com
+    <span class="kw1">DocumentRoot</span> /var/www/html/misitio.com
+    <span class="kw1">ServerName</span> misitio.com
+    <span class="kw1">ServerAlias</span> www.misitio.com
+    <span class="kw1">ErrorLog</span> ${APACHE_LOG_DIR}/misitio.com-error.log
+    <span class="kw1">CustomLog</span> ${APACHE_LOG_DIR}/misitio.com-access.log combined
+&nbsp;
+    <span class="kw1">BandwidthModule</span> <span class="kw2">On</span>
+    <span class="kw1">ForceBandWidthModule</span> <span class="kw2">On</span>
+    <span class="kw1">Bandwidth</span> <span class="kw2">all</span> <span class="nu0">64</span>
+    <span class="kw1">MinBandwidth</span> <span class="kw2">all</span> -<span class="nu0">1</span>
+    <span class="kw1">MaxConnection</span> <span class="kw2">all</span> <span class="nu0">2</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+
+                    <p>
+                        También es posible, por ejemplo, limitar la velocidad en un determinado directorio para determinados ficheros. Por ejemplo, si almacenamos en un directorio específico los ficheros más grandes (videos por ejemplo) y queremos limitar la velocidad sólo en el caso de que la gente se baje esos ficheros
+                    </p>
+                    <pre class="code apache">. . .
+    &lt;<span class="kw3">Directory</span> <span class="st0">&quot;/var/www/example1.com/public_html/media&quot;</span>&gt;
+    <span class="kw1">LargeFileLimit</span> * <span class="nu0">10240</span> <span class="nu0">102400</span>
+    &lt;/<span class="kw3">Directory</span>&gt;
+. . .</pre>
+
+                    <p>
+                        En <a href="http://bwmod.sourceforge.net/files/mod_bw-0.7.txt" class="urlextern" title="http://bwmod.sourceforge.net/files/mod_bw-0.7.txt" rel="ugc nofollow">la documentación del módulo</a> se pueden encontrar otros tantos ejemplos para limitar el ancho de banda siguiendo diferentes criterios y parámetros.
+                    </p>
+
+                </div>
+
+                <h4 id="reescritura_de_urls">Reescritura de URLs</h4>
+                <div class="level4">
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> a2enmode rewrite</pre>
+                    <pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    . . .
+    <span class="kw1">RewriteEngine</span> <span class="kw2">On</span>
+    <span class="kw1">Options</span> <span class="kw2">FollowSymLinks</span>
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+                    <pre class="code apache">. . .
+    <span class="kw1">RewriteRule</span> <span class="st0">&quot;^/antiguo_index<span class="es0">\.</span>php$&quot;</span> <span class="st0">&quot;index.html&quot;</span> [R]
+. . .</pre>
+
+                </div>
+
+                <h4 id="soporte_ssl_para_conexiones_seguras_https">Soporte SSL para conexiones seguras HTTPS</h4>
+                <div class="level4">
+
+                    <p>
+                        Ver <a href="http://despliegue.codeandcoke.com/doku.php?id=apuntes:servidores_web#configurar_ssl_tls_en_apache" class="urlextern" title="http://despliegue.codeandcoke.com/doku.php?id=apuntes:servidores_web#configurar_ssl_tls_en_apache" rel="ugc nofollow">Configurar SSL/TLS en Apache</a> en esta misma Wiki
+                    </p>
+
+                </div>
+
+                <h3 class="sectionedit7" id="personalizar_las_paginas_de_error">Personalizar las páginas de error</h3>
+                <div class="level3">
+<pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+    <span class="kw1">ServerAdmin</span> webmaster@misitio.com
+    <span class="kw1">DocumentRoot</span> <span class="st0">&quot;/var/www/html/misitio.com&quot;</span>
+    <span class="kw1">ServerName</span> misitio.com
+    <span class="kw1">ServerAlias</span> www.misitio.com
+&nbsp;
+    <span class="kw1">ErrorLog</span> <span class="st0">&quot;misitio.com-error.log&quot;</span>
+    <span class="kw1">CustomLog</span> <span class="st0">&quot;misitio.com-access.log&quot;</span> combined
+&nbsp;
+    <span class="kw1">ErrorDocument</span> <span class="nu0">404</span> /error_404.html
+    <span class="kw1">ErrorDocument</span> <span class="nu0">500</span> /error_500.html
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+
+                </div>
+
+                <h3 class="sectionedit8" id="ficheros_log">Ficheros log</h3>
+                <div class="level3">
+
+                </div>
+
+                <h4 id="ficheros_accesslog">Ficheros access.log</h4>
+                <div class="level4">
+<pre class="code apache">192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">22</span>:<span class="nu0">29</span>:<span class="nu0">23</span> +0100] <span class="st0">&quot;GET /formulario2.html HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">721</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">22</span>:<span class="nu0">29</span>:<span class="nu0">43</span> +0100] <span class="st0">&quot;GET /formulario2.html HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">753</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">22</span>:<span class="nu0">29</span>:<span class="nu0">43</span> +0100] <span class="st0">&quot;GET /formulario2.html HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">752</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">22</span>:<span class="nu0">29</span>:<span class="nu0">56</span> +0100] <span class="st0">&quot;GET /formulario2.html HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">753</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">22</span>:<span class="nu0">30</span>:<span class="nu0">20</span> +0100] <span class="st0">&quot;GET /formulario2.html HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">762</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">23</span>:<span class="nu0">24</span>:<span class="nu0">34</span> +0100] <span class="st0">&quot;GET /test HTTP/1.1&quot;</span> <span class="nu0">301</span> <span class="nu0">570</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">23</span>:<span class="nu0">24</span>:<span class="nu0">34</span> +0100] <span class="st0">&quot;GET /test/ HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">652</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">23</span>:<span class="nu0">24</span>:<span class="nu0">34</span> +0100] <span class="st0">&quot;GET /icons/blank.gif HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">431</span> <span class="st0">&quot;http://192.168.1.6/test/&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">23</span>:<span class="nu0">24</span>:<span class="nu0">34</span> +0100] <span class="st0">&quot;GET /icons/back.gif HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">499</span> <span class="st0">&quot;http://192.168.1.6/test/&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span>
+192.168.1.2 - - [01/Nov/<span class="nu0">2017</span>:<span class="nu0">23</span>:<span class="nu0">27</span>:<span class="nu0">12</span> +0100] <span class="st0">&quot;GET /test/ HTTP/1.1&quot;</span> <span class="nu0">200</span> <span class="nu0">653</span> <span class="st0">&quot;-&quot;</span> <span class="st0">&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 OPR/48.0.2685.35&quot;</span></pre>
+
+                </div>
+
+                <h4 id="ficheros_errorlog">Ficheros error.log</h4>
+                <div class="level4">
+<pre class="code apache">[Wed Nov 01 <span class="nu0">20</span>:<span class="nu0">17</span>:<span class="nu0">21.357016</span> <span class="nu0">2017</span>] [:error] [pid <span class="nu0">1346</span>] [client 192.168.1.2:<span class="nu0">60418</span>] PHP Notice:  Undefined index: email in /var/www/html/alta_usuario.php <span class="kw2">on</span> line <span class="nu0">3</span>
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">27</span>:<span class="nu0">19.185428</span> <span class="nu0">2017</span>] [mpm_prefork:notice] [pid <span class="nu0">421</span>] AH00169: caught SIGTERM, shutting down
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">27</span>:<span class="nu0">19.269594</span> <span class="nu0">2017</span>] [mpm_prefork:notice] [pid <span class="nu0">2396</span>] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">27</span>:<span class="nu0">19.269661</span> <span class="nu0">2017</span>] [core:notice] [pid <span class="nu0">2396</span>] AH00094: Command line: <span class="st0">'/usr/sbin/apache2'</span>
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">30</span>:<span class="nu0">18.774503</span> <span class="nu0">2017</span>] [mpm_prefork:notice] [pid <span class="nu0">2396</span>] AH00169: caught SIGTERM, shutting down
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">30</span>:<span class="nu0">18.861176</span> <span class="nu0">2017</span>] [mpm_prefork:notice] [pid <span class="nu0">2468</span>] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">30</span>:<span class="nu0">18.861250</span> <span class="nu0">2017</span>] [core:notice] [pid <span class="nu0">2468</span>] AH00094: Command line: <span class="st0">'/usr/sbin/apache2'</span>
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">30</span>:<span class="nu0">20.733505</span> <span class="nu0">2017</span>] [autoindex:error] [pid <span class="nu0">2488</span>] [client 192.168.1.2:<span class="nu0">50755</span>] AH01276: Cannot serve directory /var/www/html/test/: No matching <span class="kw1">DirectoryIndex</span> (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by <span class="kw1">Options</span> directive
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">30</span>:<span class="nu0">21.884441</span> <span class="nu0">2017</span>] [autoindex:error] [pid <span class="nu0">2488</span>] [client 192.168.1.2:<span class="nu0">50755</span>] AH01276: Cannot serve directory /var/www/html/test/: No matching <span class="kw1">DirectoryIndex</span> (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by <span class="kw1">Options</span> directive
+[Wed Nov 01 <span class="nu0">23</span>:<span class="nu0">30</span>:<span class="nu0">22.444693</span> <span class="nu0">2017</span>] [autoindex:error] [pid <span class="nu0">2488</span>] [client 192.168.1.2:<span class="nu0">50755</span>] AH01276: Cannot serve directory /var/www/html/test/: No matching <span class="kw1">DirectoryIndex</span> (index.html,index.cgi,index.pl,index.php,index.xhtml,index.htm) found, and server-generated directory index forbidden by <span class="kw1">Options</span> directive</pre>
+
+                </div>
+
+                <h3 class="sectionedit9" id="seguridad">Seguridad</h3>
+                <div class="level3">
+
+                </div>
+
+                <h4 id="configurar_ssl_tls_en_apache">Configurar SSL/TLS en Apache</h4>
+                <div class="level4">
+
+                    <p>
+                        SSL (Secure Socket Layer) es un protocolo de seguridad que nació con el objetivo de cifrar las comunicaciones entre los servidores web y los navegadores de forma que, si se interceptaba la conexión, nunca se pudiera desvelar el contenido de la misma. Con el paso del tiempo se han ido encontrando diversas vulnerabilidades críticas que han hecho que la recomendación sea user un nuevo protocolo llamado TLS (Transport Secure Layer).
+                    </p>
+
+                    <p>
+                        El primer paso para configurar SSL en <em>Apache</em> será crear el certificado y la clave, que se quedarán almacenados en <code>/etc/apache2/certs</code>. Para eso primero creamos la carpeta y luego el certificado y su correspondiente clave.
+                    </p>
+
+                    <p>
+                        Hay que tener en cuenta que estamos creando un certificado autofirmado. Este tipo de certificados sólo se deben usar con el propósito de enseñar o hacer una demostración puesto que en la práctica no son válidos. El navegador no confiará en él porque somos nosotros quienes lo hemos firmado. Los certificados, para que sean válidos, deben ser validados por una entidad certificadora. Más adelante veremos como el navegador avisa al usuario de que el certificado no es fiable (aunque siempre le mostrará la opción de continuar a pesar de ello)
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">mkdir</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>certs
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> openssl req <span class="re5">-x509</span> <span class="re5">-nodes</span> <span class="re5">-days</span> <span class="nu0">365</span> <span class="re5">-newkey</span> rsa:<span class="nu0">2048</span> 
+                <span class="re5">-keyout</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>certs<span class="sy0">/</span>apache2.key 
+                <span class="re5">-out</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span>certs<span class="sy0">/</span>apache2.crt
+Generating a <span class="nu0">2048</span> bit RSA private key
+......................................................+++
+................................................................
+writing new private key to <span class="st_h">'/etc/apache2/certs/apache2.key'</span>
+<span class="re5">-----</span>
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter <span class="st_h">'.'</span>, the field will be left blank.
+<span class="re5">-----</span>
+Country Name <span class="br0">&#40;</span><span class="nu0">2</span> letter code<span class="br0">&#41;</span> <span class="br0">&#91;</span>AU<span class="br0">&#93;</span>:  
+State or Province Name <span class="br0">&#40;</span>full name<span class="br0">&#41;</span> <span class="br0">&#91;</span>Some-State<span class="br0">&#93;</span>:Zaragoza
+Locality Name <span class="br0">&#40;</span>eg, city<span class="br0">&#41;</span> <span class="br0">&#91;</span><span class="br0">&#93;</span>:Zaragoza
+Organization Name <span class="br0">&#40;</span>eg, company<span class="br0">&#41;</span> <span class="br0">&#91;</span>Internet Widgits Pty Ltd<span class="br0">&#93;</span>:codeandcoke
+Organizational Unit Name <span class="br0">&#40;</span>eg, section<span class="br0">&#41;</span> <span class="br0">&#91;</span><span class="br0">&#93;</span>:web
+Common Name <span class="br0">&#40;</span>e.g. server FQDN or YOUR name<span class="br0">&#41;</span> <span class="br0">&#91;</span><span class="br0">&#93;</span>:codeandcoke.com
+Email Address <span class="br0">&#91;</span><span class="br0">&#93;</span>:santi<span class="sy0">@</span>codeandcoke.com</pre>
+
+                    <p>
+                        Ahora ya tenemos el certificado y su clave. Activamos entonces el módulo SSL de <em>Apache</em>:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> a2enmod ssl
+Considering dependency setenvif <span class="kw1">for</span> ssl:
+Module setenvif already enabled
+Considering dependency mime <span class="kw1">for</span> ssl:
+Module mime already enabled
+Considering dependency socache_shmcb <span class="kw1">for</span> ssl:
+Enabling module socache_shmcb.
+Enabling module ssl.
+See <span class="sy0">/</span>usr<span class="sy0">/</span>share<span class="sy0">/</span>doc<span class="sy0">/</span>apache2<span class="sy0">/</span>README.Debian.gz on how to configure SSL and create self-signed certificates.
+To activate the new configuration, you need to run:
+  systemctl restart apache2</pre>
+
+                    <p>
+                        Y ahora configuramos un host virtual para que soporte conexión segura. En este caso he seleccionado el mismo sitio que antes hemos configurado como ejemplo de host virtual y he realizado los cambios necesarios para que ahora soporte conexión segura (HTTPS). Basicamente es cambiar el puerto donde escucha (ahora es 443, donde escuchan las conexiones seguras), activar el soporte para SSL e indicar donde están el certificado y la clave.
+                    </p>
+                    <pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">443</span>&gt;
+    <span class="kw1">ServerAdmin</span> webmaster@misitio.com
+    <span class="kw1">DocumentRoot</span> /var/www/html/misitio.com
+    <span class="kw1">ServerName</span> misitio.com
+    <span class="kw1">ServerAlias</span> www.misitio.com
+    <span class="kw1">ErrorLog</span> ${APACHE_LOG_DIR}/misitio.com-error.log
+    <span class="kw1">CustomLog</span> ${APACHE_LOG_DIR}/misitio.com-access.log combined
+&nbsp;
+    <span class="kw1">SSLEngine</span> <span class="kw2">On</span>
+    <span class="kw1">SSLCertificateFile</span> /etc/apache2/certs/apache2.crt
+    <span class="kw1">SSLCertificateKeyFile</span> /etc/apache2/certs/apache2.key
+    <span class="kw1">SSLProtocol</span> <span class="kw2">All</span> -SSLv3
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+
+                    <p>
+                        Para probarlo, abrimos cualquier navegador e introducimos la dirección <code><a href="https://misitio.com" class="urlextern" title="https://misitio.com" rel="ugc nofollow">https://misitio.com</a></code>. Automáticamente, al usar HTTPS, se conectará al puerto 443 y el navegador intentará comprobar la validez del certificado. Si fuera válido se establecería la conexión segura y veríamos como el símbolo del candado en el navegador nos indica que la web es segura y podremos navegar sin problemas.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:conexion_segura.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:conexion_segura.png"><img src="/_media/apuntes:conexion_segura.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 5:</span> <span class="captiontext">Conexión segura con Google</span></div></div>
+                    <p>
+                        En nuestro caso hemos hecho todos los pasos correctamente pero, como hemos comentado anteriormente, nuestro certificado es autofirmado. El navegador mostrará el correspondiente error diciendo que quién firma el certificado es desconocido y avisará al usuario, quién podrá decidir no visitar la web si no fía o bien añadir a dicho sitio como excepción en el caso de que esté completamente seguro de que, a pesar del certificado, el sitio es totalmente fiable.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:exception.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:exception.png"><img src="/_media/apuntes:exception.png?w=190&amp;tok=7bb0f0" class="mediaright" alt="" width="190" /></a>
+                        <a href="/_detail/apuntes:https.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:https.png"><img src="/_media/apuntes:https.png?w=250&amp;tok=944782" class="medialeft" alt="" width="250" /></a>
+                        <a href="/_detail/apuntes:certificado.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:certificado.png"><img src="/_media/apuntes:certificado.png?w=200&amp;tok=72b5dd" class="mediacenter" alt="" width="200" /></a>
+                        <div class="caption"><span class="captionno">Figure 6:</span> <span class="captiontext">Certificado no seguro</span></div></div>
+                    <p>
+                        Si finalmente aceptamos el certificado no seguro como excepción para el navegador (temporalmente o para siempre), podremos visitar la web utilizando una conexión segura.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:httpsmisitiocom.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:httpsmisitiocom.png"><img src="/_media/apuntes:httpsmisitiocom.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 7:</span> <span class="captiontext">Conexión segura utilizando HTTPS</span></div></div>
+                    <p>
+                        Llegados a este punto nos puede interesar que todo el tráfico de la web se vea forzado a utilizar el protocolo seguro HTTPS. Incluso aunque el usuario introduzca la <abbr title="Uniform Resource Locator">URL</abbr> directamente y decide navegar utilizando HTTP (<code><a href="http://." class="urlextern" title="http://." rel="ugc nofollow">http://.</a>….</code>) nosotros podemos redirigirle hacia la opción de utilizar la opción segura.
+                    </p>
+
+                    <p>
+                        En ese caso podemos incluso configurar el host virtual no seguro con las opciones mínimas para redirigirlo al seguro. No haría falta ni incluir la opción <code>DocumentRoot</code>.
+                    </p>
+                    <pre class="code apache">&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">80</span>&gt;
+   <span class="kw1">ServerName</span> www.misitio.com
+   <span class="kw1">Redirect</span> / https://www.misitio.com/
+&lt;/<span class="kw3">VirtualHost</span>&gt;
+&nbsp;
+&lt;<span class="kw3">VirtualHost</span> *:<span class="nu0">443</span>&gt;
+  <span class="kw1">ServerName</span> misitio.com
+  <span class="kw1">DocumentRoot</span> . . .
+  . . .
+&lt;/<span class="kw3">VirtualHost</span>&gt;</pre>
+
+                    <p>
+                        Finalmente podemos optar por una redirección permanente (de esta forma así se notificará a los buscadores) modificando la orden <code>Redirect</code> por la siguiente:
+                    </p>
+                    <pre class="code apache">  . . .
+  <span class="kw1">Redirect</span> permanent / https://www.misitio.com/
+  . . .</pre>
+
+                </div>
+
+                <h4 id="proteccion_frente_a_atacantes">Protección frente a atacantes</h4>
+                <div class="level4">
+<pre class="code apache">. . .
+<span class="kw1">ServerSignature</span> <span class="kw2">Off</span>
+<span class="kw1">ServerTokens</span> Prod
+. . .</pre>
+
+                </div>
+
+                <h2 class="sectionedit10" id="despliegue_de_sitios_web">Despliegue de sitios web</h2>
+                <div class="level2">
+
+                </div>
+
+                <h2 class="sectionedit11" id="pruebas_de_rendimiento">Pruebas de rendimiento</h2>
+                <div class="level2">
+
+                    <p>
+                        Ver <a href="/apuntes:jmeter" class="wikilink1" title="apuntes:jmeter" data-wiki-id="apuntes:jmeter">Anexo JMeter</a>
+                    </p>
+
+                </div>
+
+                <h2 class="sectionedit12" id="estadisticas_web">Estadísticas web</h2>
+                <div class="level2">
+
+                    <p>
+                        <a href="/_detail/apuntes:webalizer.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:webalizer.png"><img src="/_media/apuntes:webalizer.png" class="mediacenter" alt="" /></a>
+                    </p>
+
+                    <p>
+                        Webalizer es una aplicación que podemos instalar para procesar el fichero <code>log</code> de Apache y generar un documento <abbr title="HyperText Markup Language">HTML</abbr> con las estadísticas de nuestro sitio web.
+                    </p>
+
+                    <p>
+                        Podemos instalarlo utilizando la herramienta <code>apt</code>.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> webalizer</pre>
+
+                    <p>
+                        Y a continuar utilizar el comando <code>webalizer</code> para procesar el fichero <code>log</code> que queramos (en este caso el del sitio raíz) y éste generará una carpeta en <code>/var/www/webalizer</code> con un sitio web donde podremos visitar diferentes estadísticas sobre el uso del servidor.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> webalizer <span class="sy0">/</span>var<span class="sy0">/</span>log<span class="sy0">/</span>apache2<span class="sy0">/</span>access.log</pre>
+
+                    <p>
+                        Puesto que ahora por defecto en Debian la carpeta raíz para <em>Apache</em> es <code>/var/www/html</code>, tendremos que hacer un enlace simbólico dentro de dicha carpeta que apunte a la que <em>Webalizer</em> genera para poder visualizar el informe. También podría ser interesante proteger esa carpeta de alguna manera para que no fuera visible para cualquier visitante.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:/var/www/html/$ </span><span class="kw2">sudo</span> <span class="kw2">ln</span> <span class="re5">-s</span> ..<span class="sy0">/</span>webalizer webalizer</pre>
+
+                    <p>
+                        Ahora podemos visitar la página web generada donde podremos observar las estadísticas ya preparadas para nuestro sitio web (en este caso en <code><a href="http://192.168.1.6/webalizer" class="urlextern" title="http://192.168.1.6/webalizer" rel="ugc nofollow">http://192.168.1.6/webalizer</a></code>, donde la IP será la de la máquina donde tenemos desplegado el sitio, o bien el dominio si lo tenemos)
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:webalizer1.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:webalizer1.png"><img src="/_media/apuntes:webalizer1.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 8:</span> <span class="captiontext">Estadísticas web con webalizer</span></div></div><div class="figure">
+                    <a href="/_detail/apuntes:webalizer2.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:webalizer2.png"><img src="/_media/apuntes:webalizer2.png" class="mediacenter" alt="" /></a>
+                    <div class="caption"><span class="captionno">Figure 9:</span> <span class="captiontext">Estadísticas web con webalizer</span></div></div>
+                </div>
+
+                <h2 class="sectionedit13" id="monitorizacion">Monitorización</h2>
+                <div class="level2">
+
+                    <p>
+                        <a href="/_detail/apuntes:goaccess.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:goaccess.png"><img src="/_media/apuntes:goaccess.png" class="mediacenter" alt="" /></a>
+                    </p>
+
+                    <p>
+                        <a href="http://goaccess.io" class="urlextern" title="http://goaccess.io" rel="ugc nofollow">GoAccess</a> es una analizador visual de logs de Apache en tiempo real. De esa manera permite monitorizar el acceso y uso al servidor por parte de los usuarios en cada momento con numerosas métricas.
+                    </p>
+
+                    <p>
+                        Lo primero de todo es instalarlo en nuestro servidor y, puesto que la versión que Debian trae por defecto puede no ser la más reciente, añadiremos al fichero <code>sources.list</code> de <code>apt</code> el repositorio oficial de los creadores de la herramienta. Luego instalaremos con <code>apt</code>
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw3">echo</span> <span class="st0">&quot;deb http://deb.goaccess.io/ stretch main&quot;</span> <span class="sy0">&gt;&gt;</span> <span class="sy0">/</span>etc<span class="sy0">/</span>apt<span class="sy0">/</span>sources.list
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get update</span>
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> goaccess</pre>
+
+                    <p>
+                        Podemos usarla de dos maneras, visualizando los resultados por consola o en formato <abbr title="HyperText Markup Language">HTML</abbr> como una web más.
+                    </p>
+
+                    <p>
+                        Para visualizarlos desde la consola, basta localizar el fichero log de Apache que queremos monitorizar (en este caso el fichero general, pero podríamos pasar los ficheros <code>log</code> de los diferentes hosts virtuales que hayamos configurado) y ejecutamos la aplicación tal y como se muestra en el siguiente ejemplo:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> goaccess <span class="sy0">/</span>var<span class="sy0">/</span>log<span class="sy0">/</span>apache2<span class="sy0">/</span>access.log <span class="re5">-c</span></pre>
+
+                    <p>
+                        Y tras elegir el formato de fichero <code>log</code> que usamos, podemos visualizar algo como la captura siguiente:
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:goaccess2.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:goaccess2.png"><img src="/_media/apuntes:goaccess2.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 10:</span> <span class="captiontext">Monitorización de Apache en consola</span></div></div>
+                    <p>
+                        También podemos pedirle a <em>GoAccess</em> que prepare un documento <abbr title="HyperText Markup Language">HTML</abbr> en tiempo real donde podremos ver las estadísticas en tiempo real desde el navegador.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> goaccess <span class="sy0">/</span>var<span class="sy0">/</span>log<span class="sy0">/</span>apache2<span class="sy0">/</span>access.log <span class="re5">-o</span> <span class="sy0">/</span>var<span class="sy0">/</span>www<span class="sy0">/</span>html<span class="sy0">/</span>report.html <span class="re5">--log-format</span>=COMBINED <span class="re5">--real-time-html</span>
+WebSocket server ready to accept new client connections</pre>
+
+                    <p>
+                        Y este será el aspecto que tendrá, donde además podremos ir monitorizando el uso del servidor web puesto que se irá actualizando constatemente sin necesidad de recargar la página.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:goaccess1.png?id=apuntes%3Aservidores_web" class="media" title="apuntes:goaccess1.png"><img src="/_media/apuntes:goaccess1.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 11:</span> <span class="captiontext">Monitorización de Apache en <abbr title="HyperText Markup Language">HTML</abbr> en tiempo real</span></div></div>
+                </div>
+
+                <h2 class="sectionedit14" id="utilizar_contenedores_con_docker">Utilizar contenedores con Docker</h2>
+                <div class="level2">
+                    <div class="figure">
+                        <a href="/_detail/apuntes:apache_docker.jpg?id=apuntes%3Aservidores_web" class="media" title="apuntes:apache_docker.jpg"><img src="/_media/apuntes:apache_docker.jpg" class="mediacenter" title="apache_docker.jpg" alt="apache_docker.jpg" /></a>
+                        <div class="caption"><span class="captionno">Figure 12:</span> <span class="captiontext">Múltiples contenedores para Apache</span></div></div>
+                    <p>
+                        <a href="http://despliegue.codeandcoke.com/doku.php?id=apuntes:docker" class="urlextern" title="http://despliegue.codeandcoke.com/doku.php?id=apuntes:docker" rel="ugc nofollow">Cómo trabajar con Docker</a>
+                    </p>
+
+                    <p>
+                        <a href="http://despliegue.codeandcoke.com/doku.php?id=apuntes:docker#crear_una_imagen" class="urlextern" title="http://despliegue.codeandcoke.com/doku.php?id=apuntes:docker#crear_una_imagen" rel="ugc nofollow">Crear una imagen con Docker</a>
+                    </p>
+
+                    <p>
+                        <a href="https://hub.docker.com" class="urlextern" title="https://hub.docker.com" rel="ugc nofollow">Hub de Docker</a>
+                    </p>
+
+                    <p>
+                        <a href="https://hub.docker.com/search/?isAutomated=0&amp;isOfficial=0&amp;page=1&amp;pullCount=0&amp;q=apache&amp;starCount=0" class="urlextern" title="https://hub.docker.com/search/?isAutomated=0&amp;isOfficial=0&amp;page=1&amp;pullCount=0&amp;q=apache&amp;starCount=0" rel="ugc nofollow">Imágenes de apache en el hub de Docker</a>
+                    </p>
+                    <hr />
+
+                </div>
+
+                <h2 class="sectionedit15" id="ejercicios">Ejercicios</h2>
+                <div class="level2">
+                    <ol>
+                        <li class="level1 node"><div class="li"> Configura un servidor Apache según los siguientes requisitos:</div>
+                            <ul>
+                                <li class="level2"><div class="li"> Se necesitan crear 3 sitios web: <em>agencia.com</em>, <em>miblog.com</em> y <em>misnoticias.com</em></div>
+                                </li>
+                                <li class="level2"><div class="li"> Los 3 sitios web además tienen además el mismo dominio en .es y quieren que apunte al mismo sitio web</div>
+                                </li>
+                                <li class="level2"><div class="li"> La idea es que los <code>logs</code> del servidor web se separen por cada sitio web puesto que así será más fácil revisarlos más adelante en caso de que sea necesario</div>
+                                </li>
+                                <li class="level2"><div class="li"> El sitio web <em>agencia.com</em> tiene página de error personalizada para el caso de <em>error 404</em></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="level1"><div class="li"> El sitio web <em>miblog.com</em> necesita ahora una carpeta con autenticación HTTP. La carpeta se llama <code>zonaprivada</code>. Además, necesita que no se pueda listar el contenido de la carpeta <code>img</code> desde el navegador</div>
+                        </li>
+                        <li class="level1"><div class="li"> El sitio web <em>agencia.com</em> necesita ahora utilizar conexión segura HTTPS puesto que pondrá en marcha una zona privada para los usuarios. Ya de paso quiere que todo el tráfico utilice ese protocolo por lo que quiere forzar siempre el uso de HTTPS para todo el sitio web</div>
+                        </li>
+                        <li class="level1"><div class="li"> Pon en marcha el sistema de monitorización <em>GoAccess</em> para el sitio <em>misnoticias.com</em></div>
+                        </li>
+                        <li class="level1"><div class="li"> Configura un contenedor Docker que te permita probar el sitio web de <em>miblog.com</em> sin necesidad de montar una máquina virtual o probarlo en tu propio equipo</div>
+                        </li>
+                        <li class="level1"><div class="li"> Realiza una prueba de rendimiento para ver como se comportará el sitio <em>agencia.com</em> cuando haya mil usuarios simultáneamente</div>
+                        </li>
+                        <li class="level1"><div class="li"> Despliega un contenedor Docker que te permita comprobar si una web estática (sólo <abbr title="HyperText Markup Language">HTML</abbr>/<abbr title="Cascading Style Sheets">CSS</abbr>) funciona correctamente en Ubuntu con Apache</div>
+                        </li>
+                        <li class="level1"><div class="li"> Despliega un contenedor Docker que te permita comprobar si la web del punto anterior funcionará bien con CentOS</div>
+                        </li>
+                        <li class="level1"><div class="li"> Despliega un contenedor Docker que permita probar alguno de los sitios web dinámicos (PHP/MySQL) realizados en la asignatura de <em>Desarrollo Web en Entorno Servidor</em></div>
+                        </li>
+                    </ol>
+                    <hr />
+
+                </div>
+
+                <h2 class="sectionedit16" id="proyectos_de_ejemplo">Proyectos de Ejemplo</h2>
+                <div class="level2">
+                    <hr />
+
+                </div>
+
+                <h2 class="sectionedit17" id="practicas">Prácticas</h2>
+                <div class="level2">
+                    <hr />
+
+                    <p>
+                        © 2017 Santiago Faci
+                    </p>
+
+                </div>
+                <div class="footnotes">
+                    <div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup>
+                        <div class="content"><a href="https://en.wikipedia.org/wiki/Comparison_of_web_server_software" class="urlextern" title="https://en.wikipedia.org/wiki/Comparison_of_web_server_software" rel="ugc nofollow">https://en.wikipedia.org/wiki/Comparison_of_web_server_software</a></div></div>
+                    <div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup>
+                        <div class="content"><a href="https://news.netcraft.com/archives/2017/02/27/february-2017-web-server-survey.html" class="urlextern" title="https://news.netcraft.com/archives/2017/02/27/february-2017-web-server-survey.html" rel="ugc nofollow">https://news.netcraft.com/archives/2017/02/27/february-2017-web-server-survey.html</a></div></div>
+                </div>
+
+                <!-- wikipage stop -->
+            </div>
+
+            <div class="docInfo"><bdi>apuntes/servidores_web.txt</bdi> · Last modified: 2019/01/04 13:02 (external edit)</div>
+
+        </div></div><!-- /content -->
+
+        <hr class="a11y" />
+
+        <!-- PAGE ACTIONS -->
+        <div id="dokuwiki__pagetools">
+            <h3 class="a11y">Page Tools</h3>
+            <div class="tools">
+                <ul>
+                    <li class="source"><a href="/apuntes:servidores_web?do=edit" title="Show pagesource [v]" rel="nofollow" accesskey="v"><span>Show pagesource</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/apuntes:servidores_web?do=revisions" title="Old revisions [o]" rel="nofollow" accesskey="o"><span>Old revisions</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/apuntes:servidores_web?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="Back to top [t]" rel="nofollow" accesskey="t"><span>Back to top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+            </div>
+        </div>
+    </div><!-- /wrapper -->
+
+
+    <!-- ********** FOOTER ********** -->
+    <div id="dokuwiki__footer"><div class="pad">
+        <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="license" class="urlextern">CC0 1.0 Universal</a></bdi></div>
+        <div class="buttons">
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="license"><img src="/lib/images/license/button/cc-zero.png" alt="CC0 1.0 Universal" /></a>        <a href="https://www.dokuwiki.org/donate" title="Donate" ><img
+                src="/lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+            <a href="https://php.net" title="Powered by PHP" ><img
+                    src="/lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+            <a href="//validator.w3.org/check/referer" title="Valid HTML5" ><img
+                    src="/lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+            <a href="//jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+                    src="/lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+            <a href="https://dokuwiki.org/" title="Driven by DokuWiki" ><img
+                    src="/lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+                    alt="Driven by DokuWiki" /></a>
+        </div>
+    </div></div><!-- /footer -->
+
+</div></div><!-- /site -->
+
+<div class="no"><img src="/lib/exe/taskrunner.php?id=apuntes%3Aservidores_web&amp;1637758914" width="2" height="1" alt="" /></div>
+<div id="screen__mode" class="no"></div></body>
+</html>

@@ -1,0 +1,66 @@
+version: '3.9'
+
+services:
+  dns-bind9:
+    image: dns:bind9-9.16
+    container_name: dns-bind9
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "127.0.0.1:953:953/tcp"
+    dns: 127.0.0.1
+    dns_search: carlosbouzas.es
+    networks:
+      dns_mi_red:
+        ipv4_address: 172.21.0.2
+
+  ldap-server:
+    image: osixia/openldap
+    container_name: ldap-server
+    environment:
+      # Enable this after the initial bootstrap
+      #KEEP_EXISTING_CONFIG: "true"
+      LDAP_ORGANISATION: "CarlosBouzas Spain"
+      LDAP_DOMAIN: carlosbouzas.es
+      LDAP_ADMIN_PASSWORD: quevedo
+    ports:
+      - 389:389
+    volumes:
+      - ./ldap-data/bootstrap:/container/service/slapd/assets/config/bootstrap/ldif/custom
+      - ./ldap-data/database:/var/lib/ldap
+      - ./ldap-data/config:/etc/ldap/slapd.d
+    command: --copy-service
+
+  ldap-admin:
+    image: osixia/phpldapadmin
+    container_name: ldap-admin
+    ports:
+      - 8090:80
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: ldap-server
+      PHPLDAPADMIN_HTTPS: 'false'
+    depends_on:
+      - ldap-server
+  
+  ldap-apache:
+    image: phpstorm/php-apache:8.0-xdebug3.0
+    container_name: ldap-apache
+    ports:
+      - 80:80
+    volumes:
+      - ./webapp:/var/www/html
+    depends_on:
+      - dns-bind9
+      - ldap-server
+    dns: 172.21.0.2
+    dns_search: carlosbouzas.es
+    networks:
+      dns_mi_red:
+        ipv4_address: 172.21.0.3
+
+networks:
+  dns_mi_red:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.21.0.0/16"

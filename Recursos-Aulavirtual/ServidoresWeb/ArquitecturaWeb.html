@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>apuntes:introduccion [Despliegue de Aplicaciones Web]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <script type="text/javascript">
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//piwik.arkabytes.com/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '5']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <meta name="generator" content="DokuWiki"/>
+    <meta name="theme-color" content="#008800"/>
+    <meta name="robots" content="index,follow"/>
+    <meta name="keywords" content="apuntes,introduccion"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Despliegue de Aplicaciones Web"/>
+    <link rel="start" href="/"/>
+    <link rel="contents" href="/apuntes:introduccion?do=index" title="Sitemap"/>
+    <link rel="manifest" href="/lib/exe/manifest.php"/>
+    <link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+    <link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=apuntes"/>
+    <link rel="alternate" type="text/html" title="Plain HTML" href="/_export/xhtml/apuntes:introduccion"/>
+    <link rel="alternate" type="text/plain" title="Wiki Markup" href="/_export/raw/apuntes:introduccion"/>
+    <link rel="canonical" href="https://despliegue.codeandcoke.com/apuntes:introduccion"/>
+    <link rel="stylesheet" href="/lib/exe/css.php?t=dokuwiki&amp;tseed=f17de1c5583bfecadb5a188b480c2cc7"/>
+    <!--[if gte IE 9]><!-->
+    <script >/*<![CDATA[*/var NS='apuntes';var JSINFO = {"id":"apuntes:introduccion","namespace":"apuntes","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+    /*!]]>*/</script>
+    <script charset="utf-8" src="/lib/exe/jquery.php?tseed=34a552433bc33cc9c3bc32527289a0b2" defer="defer"></script>
+    <script charset="utf-8" src="/lib/exe/js.php?t=dokuwiki&amp;tseed=f17de1c5583bfecadb5a188b480c2cc7" defer="defer"></script>
+    <script type="text/javascript" charset="utf-8"></script>
+    <!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="/lib/tpl/dokuwiki/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+</head>
+
+<body>
+<div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+
+    <!-- ********** HEADER ********** -->
+    <div id="dokuwiki__header"><div class="pad group">
+
+
+        <div class="headings group">
+            <ul class="a11y skip">
+                <li><a href="#dokuwiki__content">skip to content</a></li>
+            </ul>
+
+            <h1><a href="/start"  accesskey="h" title="[H]"><img src="/_media/wiki:logo.png" width="64" height="64" alt="" /> <span>Despliegue de Aplicaciones Web</span></a></h1>
+            <p class="claim">2º DAW</p>
+        </div>
+
+        <div class="tools group">
+            <!-- USER TOOLS -->
+            <div id="dokuwiki__usertools">
+                <h3 class="a11y">User Tools</h3>
+                <ul>
+                    <li class="action login"><a href="/apuntes:introduccion?do=login&amp;sectok=" title="Log In" rel="nofollow"><span>Log In</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+
+            <!-- SITE TOOLS -->
+            <div id="dokuwiki__sitetools">
+                <h3 class="a11y">Site Tools</h3>
+                <form action="/start" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="apuntes:introduccion" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Search" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="/doku.php" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="apuntes:introduccion" /><select name="do" class="edit quickselect" title="Tools"><option value="">Tools</option><optgroup label="Page Tools"><option value="edit">Show pagesource</option><option value="revisions">Old revisions</option><option value="backlink">Backlinks</option></optgroup><optgroup label="Site Tools"><option value="recent">Recent Changes</option><option value="media">Media Manager</option><option value="index">Sitemap</option></optgroup><optgroup label="User Tools"><option value="login">Log In</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+                <ul>
+                    <li class="action recent"><a href="/apuntes:introduccion?do=recent" title="Recent Changes [r]" rel="nofollow" accesskey="r">Recent Changes</a></li><li class="action media"><a href="/apuntes:introduccion?do=media&amp;ns=apuntes" title="Media Manager" rel="nofollow">Media Manager</a></li><li class="action index"><a href="/apuntes:introduccion?do=index" title="Sitemap [x]" rel="nofollow" accesskey="x">Sitemap</a></li>            </ul>
+            </div>
+
+        </div>
+
+        <!-- BREADCRUMBS -->
+        <div class="breadcrumbs">
+            <div class="trace"><span class="bchead">Trace:</span> <span class="bcsep">•</span> <bdi><a href="/extra:descargas"  class="breadcrumbs" title="extra:descargas">descargas</a></bdi> <span class="bcsep">•</span> <bdi><a href="/apuntes:documentacion"  class="breadcrumbs" title="apuntes:documentacion">documentacion</a></bdi> <span class="bcsep">•</span> <bdi><a href="/apuntes:servidores_web"  class="breadcrumbs" title="apuntes:servidores_web">servidores_web</a></bdi> <span class="bcsep">•</span> <bdi><a href="/apuntes:servidores_aplicaciones"  class="breadcrumbs" title="apuntes:servidores_aplicaciones">servidores_aplicaciones</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="/apuntes:introduccion"  class="breadcrumbs" title="apuntes:introduccion">introduccion</a></bdi></span></div>
+        </div>
+
+
+
+        <hr class="a11y" />
+    </div></div><!-- /header -->
+
+    <div class="wrapper group">
+
+        <!-- ********** ASIDE ********** -->
+        <div id="dokuwiki__aside"><div class="pad aside include group">
+            <h3 class="toggle">Sidebar</h3>
+            <div class="content"><div class="group">
+
+                <h3 class="sectionedit1" id="despliegue_de_aplicaciones_web">Despliegue de Aplicaciones Web</h3>
+                <div class="level3">
+                    <ol>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">Arquitecturas web</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_web" class="wikilink1" title="apuntes:servidores_web" data-wiki-id="apuntes:servidores_web">Servidores web</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servidores_aplicaciones" class="wikilink1" title="apuntes:servidores_aplicaciones" data-wiki-id="apuntes:servidores_aplicaciones">Servidores de aplicaciones</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:servicios_transferencia" class="wikilink1" title="apuntes:servicios_transferencia" data-wiki-id="apuntes:servicios_transferencia">Servicios de transferencia de archivos</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:documentacion" class="wikilink1" title="apuntes:documentacion" data-wiki-id="apuntes:documentacion">Documentación de aplicaciones web</a></div>
+                        </li>
+                    </ol>
+                    <hr />
+
+                </div>
+                <!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Despliegue de Aplicaciones Web&quot;,&quot;hid&quot;:&quot;despliegue_de_aplicaciones_web&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-354&quot;} -->
+                <h3 class="sectionedit2" id="anexos">Anexos</h3>
+                <div class="level3">
+                    <ol>
+                        <li class="level1"><div class="li"> <a href="/apuntes:linux" class="wikilink1" title="apuntes:linux" data-wiki-id="apuntes:linux">Linux</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:docker" class="wikilink1" title="apuntes:docker" data-wiki-id="apuntes:docker">Docker</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:jmeter" class="wikilink1" title="apuntes:jmeter" data-wiki-id="apuntes:jmeter">Apache JMeter</a></div>
+                        </li>
+                    </ol>
+                    <hr />
+
+                </div>
+                <!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Anexos&quot;,&quot;hid&quot;:&quot;anexos&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;355-474&quot;} -->
+                <h3 class="sectionedit3" id="enlaces">Enlaces</h3>
+                <div class="level3">
+                    <ul>
+                        <li class="level1"><div class="li"> <a href="/extra:descargas" class="wikilink1" title="extra:descargas" data-wiki-id="extra:descargas">Descargas</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/extra:software" class="wikilink1" title="extra:software" data-wiki-id="extra:software">Software necesario</a></div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/extra:referencias" class="wikilink1" title="extra:referencias" data-wiki-id="extra:referencias">Referencias</a></div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Enlaces&quot;,&quot;hid&quot;:&quot;enlaces&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;475-&quot;} -->                                            </div></div>
+        </div></div><!-- /aside -->
+
+        <!-- ********** CONTENT ********** -->
+        <div id="dokuwiki__content"><div class="pad group">
+
+            <div class="pageId"><span>apuntes:introduccion</span></div>
+
+            <div class="page group">
+                <!-- wikipage start -->
+                <!-- TOC START -->
+                <div id="dw__toc" class="dw__toc">
+                    <h3 class="toggle">Table of Contents</h3>
+                    <div>
+
+                        <ul class="toc">
+                            <li class="level2"><div class="li"><a href="#arquitecturas_web">Arquitecturas Web</a></div>
+                                <ul class="toc">
+                                    <li class="level3"><div class="li"><a href="#arquitectura_cliente-servidor">Arquitectura cliente-servidor</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#protocolos">Protocolos</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#protocolo_http">Protocolo HTTP</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_ssl_tls">Protocolo SSL/TLS</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_https">Protocolo HTTPS</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_telnet">Protocolo Telnet</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_ssh">Protocolo SSH</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_scp">Protocolo SCP</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_ftp">Protocolo FTP</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#protocolo_sftp">Protocolo SFTP</a></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="level3"><div class="li"><a href="#servidores_web_y_de_aplicaciones">Servidores web y de aplicaciones</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#estructura_de_un_servidor_web">Estructura de un servidor web</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#instalacion_y_funcionamiento_de_servidores_web">Instalación y funcionamiento de servidores web</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#instalacion_en_windows">Instalación en Windows</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#instalacion_en_linux">Instalación en Linux</a></div></li>
+                                        </ul>
+                                    </li>
+                                    <li class="level3"><div class="li"><a href="#estructura_de_un_servidor_de_aplicaciones">Estructura de un servidor de aplicaciones</a></div></li>
+                                    <li class="level3"><div class="li"><a href="#instalacion_y_funcionamiento_de_servidores_de_aplicaciones">Instalación y funcionamiento de servidores de aplicaciones</a></div>
+                                        <ul class="toc">
+                                            <li class="level4"><div class="li"><a href="#instalacion_en_windows1">Instalación en Windows</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#instalacion_en_linux1">Instalación en Linux</a></div></li>
+                                            <li class="level4"><div class="li"><a href="#configuracion_basica">Configuración básica</a></div></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="level2"><div class="li"><a href="#ejercicios">Ejercicios</a></div></li>
+                            <li class="level2"><div class="li"><a href="#proyectos_de_ejemplo">Proyectos de Ejemplo</a></div></li>
+                            <li class="level2"><div class="li"><a href="#practicas">Prácticas</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- TOC END -->
+
+                <h2 class="sectionedit1" id="arquitecturas_web">Arquitecturas Web</h2>
+                <div class="level2">
+
+                </div>
+
+                <h3 class="sectionedit2" id="arquitectura_cliente-servidor">Arquitectura cliente-servidor</h3>
+                <div class="level3">
+
+                    <p>
+                        El modelo de desarrollo web se apoya, en una primera aproximación desde un punto de vista centrado en el hardware, en lo que se conoce como arquitectura cliente-servidor <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> que define un patrón de arquitectura donde existen dos actores, cliente y servidor, de forma que el primero es quién se conecta con el segundo para solicitar algún servicio. En el caso que nos ocupa, el desarrollo web, los clientes solicitan que se les sirva una web para visualizarla, aunque también es posible solicitar información si hablamos del caso de los servicios web que también veremos más adelante. En cualquier caso, en ambos casos aparece el mismo escenario, donde un servidor se encuentra ejecutándose ininterrupidamente a la espera de que los diferentes clientes realicen una solicitud.
+                    </p>
+
+                    <p>
+                        Normalmente a la solicitud que hacen los clientes al servidor se le llama petición (request) y a lo que el servidor devuelve a dicho cliente le llamamos respuesta (request).
+                    </p>
+
+                    <p>
+                        También hay que tener en cuenta que esta arquitectura cliente-servidor plantea la posibilidad de numerosos clientes atendidos por un mismo servidor. Es decir, el servidor será un software multitarea que será capaz de atender peticiones simultáneas de numerosos clientes.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:cliente_servidor.jpg?id=apuntes%3Aintroduccion" class="media" title="apuntes:cliente_servidor.jpg"><img src="/_media/apuntes:cliente_servidor.jpg" class="mediacenter" title="cliente_servidor.jpg" alt="cliente_servidor.jpg" /></a>
+                        <div class="caption"><span class="captionno">Figure 1:</span> <span class="captiontext">Arquitectura cliente-servidor</span></div></div>
+                    <p>
+                        Desde un punto de vista de desarrollo una aproximación más detallada para este modelo de ejecución es lo que se conoce como modelo en 3 capas <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>. Es un modelo donde se muestra más en detalle como se distribuye el software que participa en cualquier desarrollo web. Sigue estando presente la arquitectura cliente-servidor (todo se basa en ella) pero aparecen más detalles como el software utilizado en cada uno de los dos actores y como interactúan las diferentes tecnologías o aplicaciones.
+                    </p>
+
+                </div>
+
+                <h3 class="sectionedit3" id="protocolos">Protocolos</h3>
+                <div class="level3">
+
+                    <p>
+                        La pila de protocolos en los que se basa Internet es muy amplia, ya sea siguiendo el modelo OSI o el modelo TCP. En cualquier caso, en el tema que nos ocupa a nosotros sólo nos fijaremos en la última capa, la capa de transporte. Es en esta capa donde están los protocolos de la web, los que usan navegadores y servidores (web y aplicaciones) para comunicarse. Al fin y al cabo, la web no es más que una de las tantas aplicaciones que existen en Internet. Otras aplicaciones, que también veremos en este curso, son <abbr title="File Transfer Protocol">FTP</abbr> y SSH, entre otras.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:osi.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:osi.png"><img src="/_media/apuntes:osi.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 2:</span> <span class="captiontext">Modelo OSI (Fuente: Wikipedia)</span></div></div>
+                    <p>
+                        Puesto que en esta asignatura nos centramos principalmente en la web y, aunque en menor medida, en los protocolos (de aplicación) que de alguna manera son de utilidad para trabajar con ella, nos centraremos exclusivamente en ellos:
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_http" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">HTTP</a>: HyperText Transfer Protocol. Protocolo de comunicación para la web</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_https" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">HTTPS</a>: HTTP Secure. Protocolo seguro de comunicación para la web. Surge de aplicar una capa de seguridad, utilizando SSL/TLS, al protocolo HTTP</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_telnet" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">Telnet</a>: Es un protocolo que establece una línea de comunicación basada en texto entre un cliente y un servidor. Desde su aparición se utilizó ampliamente como vía de comunicación remota con el sistema operativo ya que permitía la ejecución remota de comandos. Con el tiempo ha ido cayendo en desuso a favor de un protocolo seguro que lo sustituye, SSH.</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_ssh" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">SSH</a>: Secure Shell. Protocolo seguro de comunicación ampliamente utilizado para la gestión remota de sistemas, ya que permite la ejecución remota de comandos. Surge como reemplazo para el protocolo no seguro Telnet.</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_scp" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">SCP</a>: Secure Copy. Es una protocolo seguro (basado en RCP, Remote Copy) que permite transferir ficheros entre un equipo local y otro remoto o entre dos equipos remotos. Utiliza SSH por lo que garantiza la seguridad de la transferencia asi como de la autenticación de los usuarios.</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_ftp" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">FTP</a>: File Transfer Protocol. Es un protocolo que se utiliza para la transferencia de archivos entre un equipo local y otro remoto. Su principal problema es que tanto la autenticación como la transferencia se realiza como texto plano, por lo que se considera un protocolo no seguro.</div>
+                        </li>
+                        <li class="level1"><div class="li"> <a href="/apuntes:introduccion#protocolo_sftp" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">SFTP</a>. SSH <abbr title="File Transfer Protocol">FTP</abbr>. Es una versión del protocolo <abbr title="File Transfer Protocol">FTP</abbr> que utiliza SSH para cifrar tanto la autenticación del usuario como la trasferencia de los archivos. Es la opción segura al uso de un protocolo como <abbr title="File Transfer Protocol">FTP</abbr></div>
+                        </li>
+                    </ul>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:protocolos.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:protocolos.png"><img src="/_media/apuntes:protocolos.png?w=500&amp;tok=5ede28" class="mediacenter" alt="" width="500" /></a>
+                        <div class="caption"><span class="captionno">Figure 3:</span> <span class="captiontext">Protocolos en Internet (Fuente:Wikipedia)</span></div></div>
+                </div>
+
+                <h4 id="protocolo_http">Protocolo HTTP</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo HTTP es un protocolo para la transferencia de páginas web (hipertexto) entre los clientes (navegadores web) y un servidor web. Cuando un usuario, a través del navegador, quiere un documento (página web), éste lo solicita mediante una petición HTTP al servidor. Éste le contestará con una respuesta HTTP y el documento, si dispone de él.
+                    </p>
+
+                    <p>
+                        Hay que tener en cuenta que, al contrario que el resto de protocolos que estamos viendo en esta parte, HTTP no tiene estado. Eso significa que un servidor web no almacena ninguna información sobre los clientes que se conectan a él. Así, cada petición/respuesta supone una conexión única y aislada. En cualquier caso, utilizando tecnologías en el lado servidor es posible escribir aplicaciones web que puedan establecer sesiones o cookies para almacenar ese estado y “recordar” de alguna manera a los clientes en sucesivas conexiones
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:http.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:http.png"><img src="/_media/apuntes:http.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 4:</span> <span class="captiontext">Protocolo HTTP</span></div></div>
+                    <p>
+                        A continuación, a modo de ejemplo, podemos ver una petición HTTP que un navegador (<em>Firefox</em>) ha realizado a un sitio web (<em>misitio.com</em>), solicitando el documento <em>index.html</em>.
+                    </p>
+                    <pre class="code bash">GET <span class="sy0">/</span>index.html HTTP<span class="sy0">/</span><span class="nu0">1.1</span>
+ Host: www.misitio.com
+ User-Agent: cliente
+ Referer: www.google.com
+ User-Agent: Mozilla<span class="sy0">/</span><span class="nu0">5.0</span> <span class="br0">&#40;</span>X11; Linux x86_64; rv:<span class="nu0">45.0</span><span class="br0">&#41;</span> Gecko<span class="sy0">/</span><span class="nu0">20100101</span> Firefox<span class="sy0">/</span><span class="nu0">45.0</span>
+ Connection: keep-alive
+ <span class="br0">&#91;</span>Línea en blanco<span class="br0">&#93;</span></pre>
+
+                    <p>
+                        Y el servidor web le contesta con el contenido del documento para que el navegador que lo ha solicitado lo pueda renderizar para que el usuario lo visualice en su pantalla:
+                    </p>
+                    <pre class="code bash">HTTP<span class="sy0">/</span><span class="nu0">1.1</span> <span class="nu0">200</span> OK
+Date: Fri, <span class="nu0">31</span> Dec <span class="nu0">2003</span> <span class="nu0">23</span>:<span class="nu0">59</span>:<span class="nu0">59</span> GMT
+Content-Type: text<span class="sy0">/</span>html
+Content-Length: <span class="nu0">1221</span>
+&nbsp;
+<span class="sy0">&lt;</span>html <span class="re2">lang</span>=<span class="st0">&quot;es&quot;</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span><span class="kw2">head</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>meta <span class="re2">charset</span>=<span class="st0">&quot;utf-8&quot;</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>title<span class="sy0">&gt;</span>Mi título<span class="sy0">&lt;/</span>title<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span><span class="kw2">head</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>body<span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>h1<span class="sy0">&gt;</span>Bienvenido a mi sitio.com<span class="sy0">&lt;/</span>h1<span class="sy0">&gt;</span>
+. . .
+. . .
+<span class="sy0">&lt;/</span>body<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>html<span class="sy0">&gt;</span></pre>
+
+                </div>
+
+                <h4 id="protocolo_ssl_tls">Protocolo SSL/TLS</h4>
+                <div class="level4">
+
+                    <p>
+                        SSL (Secure Sockets Layer) y TSL (Transport Layer Security) son protocolos de cifrado que se utilizan para cifrar las comunicaciones en Internet. En ocasiones se hace referencia en ambos casos al uso de SSL pero la realidad es que TLS es el sucesor de SSL debido a las diferentes vulnerabilidades que han ido surgiendo de este último.
+                    </p>
+
+                    <p>
+                        En este caso, la aplicación de esta capa de seguridad, cifrando las comunicaciones del protocolo HTTP, da lugar a lo que se conoce como HTTPS, que veremos a continuación.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:ssl.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:ssl.png"><img src="/_media/apuntes:ssl.png?w=500&amp;tok=5f4c96" class="mediacenter" alt="" width="500" /></a>
+                        <div class="caption"><span class="captionno">Figure 5:</span> <span class="captiontext">Protocolo SSL/TLS</span></div></div><div class="figure">
+                    <a href="/_detail/apuntes:capa_ssl.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:capa_ssl.png"><img src="/_media/apuntes:capa_ssl.png?w=500&amp;tok=575d1b" class="mediacenter" alt="" width="500" /></a>
+                    <div class="caption"><span class="captionno">Figure 6:</span> <span class="captiontext">SSL/TLS en el modelo TCP</span></div></div>
+                </div>
+
+                <h4 id="protocolo_https">Protocolo HTTPS</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo HTTPS (HTTP Secure) es un protocolo de comunicación segura a través de Internet. Este protocolo se basa en la comunicación del protocolo HTTP pero con una capa de seguridad adicional cifrando el contenido con TSL ó SSL.
+                    </p>
+
+                    <p>
+                        Su principal utilidad es el cifrado de los mecanismos de autenticación en la web, justamente cuando el usuario envía sus credenciales al servidor para validar su sesión. Es el momento más crítico en una comunicación, aunque actualmente se está utilizando abiertamente durante toda la comunicación entre cliente y servidor en la web por privacidad e integridad.
+                    </p>
+
+                    <p>
+                        Con respecto a la integridad, HTTPS proporciona un mecanismo de autenticación con respecto al sitio web y servidor web que estamos visitando, evitando asi ataques como el del <em>Man in the Middle</em>. Es la manera en la que podemos estar seguros de que el sitio con el que estamos comunicandonos es el que creemos que es.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:https_protocolo.jpg?id=apuntes%3Aintroduccion" class="media" title="apuntes:https_protocolo.jpg"><img src="/_media/apuntes:https_protocolo.jpg" class="mediacenter" title="https_protocolo.jpg" alt="https_protocolo.jpg" /></a>
+                        <div class="caption"><span class="captionno">Figure 7:</span> <span class="captiontext">Protocolo HTTPS</span></div></div>
+                </div>
+
+                <h4 id="protocolo_telnet">Protocolo Telnet</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo Telnet (<strong>Tel</strong>etype <strong>net</strong>work) surgió como una forma de proporcionar una comunicación interactiva basada en texto entre dos máquinas. Telnet proporciona acceso remoto a otra máquina y permite ejecutar comandos en ella y visualizar los resultados en pantalla. Para ello, en la máquina remota debía estar ejecutándose el lado servidor y, en el lado cliente, el usuario debía utilizar una aplicación cliente para establecer la conexión y más adelante los comandos como si de la línea de comandos del sistema operativo se tratara.
+                    </p>
+
+                    <p>
+                        Con el tiempo, y debido a la falta de seguridad en las comunicaciones y la autenticación de los usuarios, se abandonó el uso de este protocolo en beneficio de otros como SSH.
+                    </p>
+
+                </div>
+
+                <h4 id="protocolo_ssh">Protocolo SSH</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo SSH (<strong>S</strong>ecure <strong>SH</strong>ell), al igual que Telnet, proporciona una forma de comunicación entre dos máquinas remotas, basada en texto pero en este caso tanto la autenticación como la propia comunicación se encuentran cifradas. Su uso más habitual está en la gestión remota de máquinas Unix/Linux, tal y como ocurriera en su momento con Telnet.
+                    </p>
+
+                    <p>
+                        Además, otros protocolos como <abbr title="File Transfer Protocol">FTP</abbr> (por eso llamado SFTP) o SCP se apoyan en este protocolo de cifrado para cifrar sus comunicaciones.
+                    </p>
+
+                </div>
+
+                <h4 id="protocolo_scp">Protocolo SCP</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo SCP (<strong>S</strong>ecure <strong>C</strong>o<strong>P</strong>y), basado en el protocolo SSH, permite copiar ficheros entre dos equipos, tanto del equipo local al remoto como en el sentido contrario.
+                    </p>
+
+                </div>
+
+                <h4 id="protocolo_ftp">Protocolo FTP</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo <abbr title="File Transfer Protocol">FTP</abbr> (<strong>F</strong>ile <strong>T</strong>ransfer <strong>P</strong>rotocol) es un protocolo para la transferencia de ficheros entre dos máquinas: una máquina cliente y otra máquina remota o servidor donde se alojan dichos ficheros. La idea es que la máquina remota sirva como repositorio de información y sean los múltiples clientes los que se conectan a ella para coger o subir ficheros.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:ftp_activo_pasivo.jpg?id=apuntes%3Aintroduccion" class="media" title="apuntes:ftp_activo_pasivo.jpg"><img src="/_media/apuntes:ftp_activo_pasivo.jpg" class="mediacenter" title="Print" alt="Print" /></a>
+                        <div class="caption"><span class="captionno">Figure 8:</span> <span class="captiontext">Protocolo <abbr title="File Transfer Protocol">FTP</abbr> (activo y pasivo)</span></div></div>
+                </div>
+
+                <h4 id="protocolo_sftp">Protocolo SFTP</h4>
+                <div class="level4">
+
+                    <p>
+                        El protocolo SFTP (SSH <abbr title="File Transfer Protocol">FTP</abbr>) es la versión segura del protocolo <abbr title="File Transfer Protocol">FTP</abbr>. Esta vez, a diferencia de lo que ocurre con el protocolo <abbr title="File Transfer Protocol">FTP</abbr>, las comunicaciones se cifran de la misma forma que en el protocolo SSH.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:sftp.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:sftp.png"><img src="/_media/apuntes:sftp.png" class="mediacenter" alt="" /></a>
+                        <div class="caption"><span class="captionno">Figure 9:</span> <span class="captiontext">Protocolo SFTP</span></div></div>
+                </div>
+
+                <h3 class="sectionedit4" id="servidores_web_y_de_aplicaciones">Servidores web y de aplicaciones</h3>
+                <div class="level3">
+
+                    <p>
+                        La realidad es que existen una infinidad de servidores web<sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup>
+                        y de aplicaciones<sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup>
+                        . Aunque a la hora de la verdad, unos pocos de ellos (4 ó 5) se reparten más del 90% de los sitios web en Internet. Los demás, soluciones quizás muy específicas, no es que no sean buenas aplicaciones sino que se utilizan en ámbitos muy concretos. Los más utilizados tienen un perfil más generalista y la gran mayoría de desarrolladores y administradores se decantan por ellos porque cumplen con los requisitos que se necesitan.
+                    </p>
+
+                </div>
+
+                <h3 class="sectionedit5" id="estructura_de_un_servidor_web">Estructura de un servidor web</h3>
+                <div class="level3">
+
+                </div>
+
+                <h3 class="sectionedit6" id="instalacion_y_funcionamiento_de_servidores_web">Instalación y funcionamiento de servidores web</h3>
+                <div class="level3">
+
+                </div>
+
+                <h4 id="instalacion_en_windows">Instalación en Windows</h4>
+                <div class="level4">
+
+                    <p>
+                        Para la instalación del servidor web Apache en Windows tenemos que hacernos con algunos de los empaquetados com <a href="https://www.apachefriends.org/index.html" class="urlextern" title="https://www.apachefriends.org/index.html" rel="ugc nofollow">XAMPP</a> debido a que el proyecto Apache ha decidido dejar de preparar instaladores para este sistema<sup><a href="#fn__5" id="fnt__5" class="fn_top">5)</a></sup>.
+                    </p>
+
+                    <p>
+                        En nuestro caso contamos con el instalador XAMPP, que además añade paquetes opcionales muy necesarios como:
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> MySQL</div>
+                        </li>
+                        <li class="level1"><div class="li"> PHP</div>
+                        </li>
+                        <li class="level1"><div class="li"> Filezilla (servidor <abbr title="File Transfer Protocol">FTP</abbr>)</div>
+                        </li>
+                        <li class="level1"><div class="li"> Servidor de correo</div>
+                        </li>
+                        <li class="level1"><div class="li"> Apache Tomcat</div>
+                        </li>
+                        <li class="level1"><div class="li"> phpMyAdmin</div>
+                        </li>
+                    </ul>
+
+                    <p>
+                        Además, incorpora un panel de control desde donde podemos iniciar/detener los diferentes servidores instalados en el caso de que hayamos decidido no instalarlos como servicios del Sistema Operativo. En cualquier caso, la opción recomendada es la de hacerlo como servicios puesto que de esa manera estos servicios arrancan automáticamente en el arranque del sistema y se detienen automáticamente cuando este se apaga. Es la mejor manera de garantizar la disponibilidad total puesto que no tenemos que estar pendientes de ellos.
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:xampp_homepage.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:xampp_homepage.png"><img src="/_media/apuntes:xampp_homepage.png?w=250&amp;tok=9ff90a" class="mediaright" alt="" width="250" /></a>
+                        <a href="/_detail/apuntes:xampp_control_panel.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:xampp_control_panel.png"><img src="/_media/apuntes:xampp_control_panel.png?w=300&amp;tok=4c7f67" class="media" alt="" width="300" /></a>
+                        <a href="/_detail/apuntes:xampp_logo.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:xampp_logo.png"><img src="/_media/apuntes:xampp_logo.png?w=100&amp;tok=136449" class="mediaright" alt="" width="100" /></a>
+                        <div class="caption"><span class="captionno">Figure 10:</span> <span class="captiontext">Solución XAMPP</span></div></div>
+                </div>
+
+                <h4 id="instalacion_en_linux">Instalación en Linux</h4>
+                <div class="level4">
+
+                    <p>
+                        Para la instalación en Linux, puesto que usaremos la distribución Debian, lo haremos utilizando la herramienta <code>apt</code> que nos permitirá instalar el servidor web y todas sus dependencias sin mayor problema.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> apache2 apache2-utils</pre>
+
+                    <p>
+                        Una vez instalado, podremos encontrarnos con el directorio <code>etc/apache2</code> donde se almacenan los ficheros de configuración y <code>/var/www/html</code> que es la carpeta que <em>Apache</em> tiene configurada por defecto para almacenar las páginas web del sitio principal.
+                    </p>
+
+                    <p>
+                        Para comprobar que hasta el momento todo funciona, podemos visitar la web que por defecto se instala visitándola desde nuestro equipo. Para eso, introducimos la IP en el navegador de la máquina donde hemos instalado <em>Apache</em> y tendremos que ver la web que por defecto se instala:
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:apache_homepage.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:apache_homepage.png"><img src="/_media/apuntes:apache_homepage.png?w=400&amp;tok=142639" class="mediacenter" alt="" width="400" /></a>
+                        <div class="caption"><span class="captionno">Figure 11:</span> <span class="captiontext">Página por defecto de Apache</span></div></div>
+                    <p>
+                        Además, instalaremos todas las herramientas que ya instalamos en Windows a través de <em>XAMPP</em>. En este caso lo haremos instalándolas una a una con <code>apt</code>.
+                    </p>
+                    <iframe src="//www.youtube-nocookie.com/embed/i5tSLxM-Wpo" height="239" width="425" class="vshare__center" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+                    <p>
+                        <br/>
+
+                    </p>
+
+                </div>
+
+                <h5 id="instalacion_de_mysql">Instalación de MySQL</h5>
+                <div class="level5">
+
+                    <p>
+                        El siguiente comando instalará la versión disponible de <em>MySQL</em> en la versión 9 de Debian que es la que usamos. Hay que tener en cuenta que realmente se instalará <em>MariaDB</em> (versión 10.1), que es el fork libre que surgió de <em>MySQL</em> y por el que ha optado Debian desde entonces. Es totalmente compatible con <em>MySQL</em> hasta el momento, por lo que no tendremos ningún problema a la hora de trabajar con ambos.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> mysql-server</pre>
+
+                </div>
+
+                <h5 id="instalacion_de_php">Instalación de PHP</h5>
+                <div class="level5">
+
+                    <p>
+                        También tenemos que instalar el intérprete para lenguaje <em>PHP</em> y el módulo para que <em>Apache</em> pueda trabajar con él:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> php libapache2-mod-php7.0</pre>
+
+                </div>
+
+                <h5 id="instalacion_de_phpmyadmin">Instalación de phpMyAdmin</h5>
+                <div class="level5">
+
+                    <p>
+                        Ahora instalamos la herramienta <em>phpMyAdmin</em> para administrar nuestro servidor de Bases de Datos:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> phpmyadmin</pre>
+                    <iframe src="//www.youtube-nocookie.com/embed/I1qDso_ohn4" height="239" width="425" class="vshare__center" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+                    <p>
+                        <br/>
+
+                    </p>
+
+                </div>
+
+                <h5 id="instalacion_de_un_servidor_ftp">Instalación de un servidor FTP</h5>
+                <div class="level5">
+
+                    <p>
+                        También instalaremos un servidor de <abbr title="File Transfer Protocol">FTP</abbr> para que sea posible desplegar los sitios web que se desarrollen. En nuestro caso usaremos un servidor <abbr title="File Transfer Protocol">FTP</abbr> seguro como <em>Pure-FTPd</em>
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> pure-ftpd</pre>
+
+                    <p>
+                        La instalación por defecto iniciará el servicio en el puerto 21 y podremos utilizar nuestra cuenta de usuario del sistema como cuenta para acceder por <abbr title="File Transfer Protocol">FTP</abbr>. Simplemente tendremos que tener en cuenta que por defecto accederemos a la carpeta <code>home</code> y a nosotros nos interesa acceder a la carpeta donde <em>Apache</em> espera encontrar las webs que debe servir a los visitantes. Pero incluso aunque nos posicionemos “manualmente” (o configurando la configuración de nuestro despliegue desde el IDE que usemos) nos encontraremos con que no tenemos permisos sobre dicha carpeta.
+                    </p>
+
+                    <p>
+                        Si queremos poder escribir sobre la ruta <code>/var/www/html</code> deberemos configurar los permisos correctos o reasignar usuarios y grupos a dicha carpeta. Podemos, por ejemplo, crear un grupo de desarrolladores, incluir nuestro usuario a dicho grupo y permitir que éste pueda escribir en la carpeta:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> addgroup dev
+Adding group <span class="sy0">`</span>dev<span class="sy0">`</span> <span class="br0">&#40;</span>GID <span class="nu0">1001</span><span class="br0">&#41;</span> ...
+Done
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> adduser santi dev
+Adding user <span class="sy0">`</span>santi<span class="sy0">`</span> to group <span class="sy0">`</span>dev<span class="sy0">`</span> ...
+Adding user santi to group dev
+Done
+<span class="co4">santi@zenbook:$ </span><span class="kw3">cd</span> <span class="sy0">/</span>var<span class="sy0">/</span>www
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">chown</span> root.dev html
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">chmod</span> g+<span class="kw2">w</span> html</pre>
+
+                    <p>
+                        Ahora nuestro usuario (<code>santi</code> en este caso) ya podrá copiar archivos a la carpeta que utilizará <em>Apache</em> por defecto.
+                    </p>
+                    <iframe src="//www.youtube-nocookie.com/embed/eVWnzLmqnfE" height="239" width="425" class="vshare__center" allowfullscreen="" frameborder="0" scrolling="no"></iframe>
+                    <p>
+                        <br/>
+
+                    </p>
+
+                </div>
+
+                <h3 class="sectionedit7" id="estructura_de_un_servidor_de_aplicaciones">Estructura de un servidor de aplicaciones</h3>
+                <div class="level3">
+
+                </div>
+
+                <h3 class="sectionedit8" id="instalacion_y_funcionamiento_de_servidores_de_aplicaciones">Instalación y funcionamiento de servidores de aplicaciones</h3>
+                <div class="level3">
+
+                </div>
+
+                <h4 id="instalacion_en_windows1">Instalación en Windows</h4>
+                <div class="level4">
+
+                    <p>
+                        Puesto que utilizamos <em>XAMPP</em> en Windows y <em>Apache Tomcat</em> viene como opción, siguiendo las instrucciones de la instalación de XAMPP de la parte de <a href="/apuntes:introduccion#instalacion_en_windows" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">instalación de servidores web</a> podéis ver como hacerlo. Una vez instalado la configuración es común tanto para Windows y Linux por lo que se puede acceder directamente a <a href="/apuntes:introduccion#configuracion_basica" class="wikilink1" title="apuntes:introduccion" data-wiki-id="apuntes:introduccion">ese apartado</a>.
+                    </p>
+
+                </div>
+
+                <h4 id="instalacion_en_linux1">Instalación en Linux</h4>
+                <div class="level4">
+
+                    <p>
+                        El servidor de aplicaciones <a href="http://tomcat.apache.org" class="urlextern" title="http://tomcat.apache.org" rel="ugc nofollow">Apache Tomcat</a> no dispone de instalador por lo que la manera habitual de instalarlo es descargar la versión que queramos (actualmente la última versión es la 9) y descomprimirlo en la carpeta que queramos.
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">tar</span> xvzf apache-tomcat-9.0.1.tar.gz
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>catalina.policy
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>catalina.properties
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>context.xml
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>jaspic-providers.xml
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>jaspic-providers.xsd
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>logging.properties
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>server.xml
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>tomcat-users.xml
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>tomcat-users.xsd
+x apache-tomcat-9.0.1<span class="sy0">/</span>conf<span class="sy0">/</span>web.xml
+x apache-tomcat-9.0.1<span class="sy0">/</span>bin<span class="sy0">/</span>
+. . .
+. . .</pre>
+
+                    <p>
+                        Para iniciarlo, dispone de un script <code>startup.sh</code> que lo lanzará en segundo plano:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>.<span class="sy0">/</span>startup.sh
+Using CATALINA_BASE:   <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67
+Using CATALINA_HOME:   <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67
+Using CATALINA_TMPDIR: <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67<span class="sy0">/</span>temp
+Using JRE_HOME:        <span class="sy0">/</span>Library<span class="sy0">/</span>Java<span class="sy0">/</span>JavaVirtualMachines<span class="sy0">/</span>jdk1.8.0_25.jdk<span class="sy0">/</span>Contents<span class="sy0">/</span>Home
+Using CLASSPATH:       <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67<span class="sy0">/</span>bin<span class="sy0">/</span>bootstrap.jar:<span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67<span class="sy0">/</span>bin<span class="sy0">/</span>tomcat-juli.jar
+Tomcat started.</pre>
+
+                    <p>
+                        Y también de un script <code>shutdown.sh</code> que lo detiene:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span>.<span class="sy0">/</span>shutdown.sh
+Using CATALINA_BASE:   <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67
+Using CATALINA_HOME:   <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67
+Using CATALINA_TMPDIR: <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67<span class="sy0">/</span>temp
+Using JRE_HOME:        <span class="sy0">/</span>Library<span class="sy0">/</span>Java<span class="sy0">/</span>JavaVirtualMachines<span class="sy0">/</span>jdk1.8.0_25.jdk<span class="sy0">/</span>Contents<span class="sy0">/</span>Home
+Using CLASSPATH:       <span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67<span class="sy0">/</span>bin<span class="sy0">/</span>bootstrap.jar:<span class="sy0">/</span>Users<span class="sy0">/</span>Santi<span class="sy0">/</span>apache-tomcat-7.0.67<span class="sy0">/</span>bin<span class="sy0">/</span>tomcat-juli.jar</pre>
+
+                </div>
+
+                <h5 id="instalacion_en_debian_utilizando_apt">Instalación en Debian utilizando apt</h5>
+                <div class="level5">
+
+                    <p>
+                        Si trabajamos con Debian existe la posibilidad de instalar Tomcat utilizando la herramienta <em>apt</em>. En el ejemplo siguiente instalamos el servidor de aplicaciones y todas herramientas y documentación (vienen como paquetes a parte en Debian):
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> <span class="kw2">apt-get install</span> tomcat8 tomcat8-<span class="sy0">*</span></pre>
+
+                    <p>
+                        En este caso, si queremos iniciar/detener/reiniciar el servidor, puesto que éste se encontrará ahora instalado como un servicio en nuestro sistema Linux tendremos que hacerlo como habitualmente se hace:
+                    </p>
+                    <pre class="code bash"><span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service tomcat8 start
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service tomcat8 restart
+<span class="co4">santi@zenbook:$ </span><span class="kw2">sudo</span> service tomcat8 stop</pre>
+
+                    <p>
+                        También tenemos que tener en cuenta que, en este caso, todos los ficheros de configuración de <em>Apache Tomcat</em> se encuentran en <code>/etc/tomcat8</code>.
+                    </p>
+
+                </div>
+
+                <h4 id="configuracion_basica">Configuración básica</h4>
+                <div class="level4">
+
+                    <p>
+                        En cualquier caso, al tratarse de un servidor de aplicaciones, lo habitual es que <em>escuche</em> en el puerto 8080, aunque hay que tener en cuenta que se puede cambiar en el caso de que en el equipo donde se encuentra instalado no haya un servidor web y además queramos que nuestra aplicación web quede expuesta al exterior. Nos interesará, por tanto, modificar el puerto al 80 para mayor comodidad a la hora de acceder a nuestra aplicación desde el navegador.
+                    </p>
+
+                    <p>
+                        Para cambiar el puerto donde <em>Apache Tomcat</em> escuchará tenemos que editar el fichero <code>conf/server.xml</code> y cambiar el número del conector del protocolo HTTP:
+                    </p>
+                    <pre class="code xml">. . .
+<span class="sc3"><span class="re1">&lt;Connector</span> <span class="re0">port</span>=<span class="st0">&quot;8080&quot;</span> <span class="re0">protocol</span>=<span class="st0">&quot;HTTP/1.1&quot;</span></span>
+<span class="sc3">           <span class="re0">connectionTimeout</span>=<span class="st0">&quot;20000&quot;</span></span>
+<span class="sc3">           <span class="re0">redirectPort</span>=<span class="st0">&quot;8443&quot;</span> <span class="re2">/&gt;</span></span>
+. . .</pre>
+
+                    <p>
+                        Independientemente del puerto que hayamos configurado, si accedemos a la página principal del servidor de aplicaciones nos encontraremos la portada:
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:tomcat_home.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:tomcat_home.png"><img src="/_media/apuntes:tomcat_home.png?w=450&amp;tok=957d62" class="mediacenter" alt="" width="450" /></a>
+                        <div class="caption"><span class="captionno">Figure 12:</span> <span class="captiontext">Home Apache Tomcat</span></div></div>
+                    <p>
+                        Desde donde podemos acceder a diferentes secciones donde podemos monitorizar/configurar algunos aspectos del servidor
+                    </p>
+                    <div class="figure">
+                        <a href="/_detail/apuntes:tomcat_status.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:tomcat_status.png"><img src="/_media/apuntes:tomcat_status.png?w=450&amp;tok=02c07f" class="mediacenter" alt="" width="450" /></a>
+                        <div class="caption"><span class="captionno">Figure 13:</span> <span class="captiontext">Estado del servidor</span></div></div><div class="figure">
+                    <a href="/_detail/apuntes:tomcat_apps.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:tomcat_apps.png"><img src="/_media/apuntes:tomcat_apps.png?w=450&amp;tok=0ec6cd" class="mediacenter" alt="" width="450" /></a>
+                    <div class="caption"><span class="captionno">Figure 14:</span> <span class="captiontext">Listado de aplicaciones web desplegadas</span></div></div><div class="figure">
+                    <a href="/_detail/apuntes:tomcat_vhosts.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:tomcat_vhosts.png"><img src="/_media/apuntes:tomcat_vhosts.png?w=450&amp;tok=20880d" class="mediacenter" alt="" width="450" /></a>
+                    <div class="caption"><span class="captionno">Figure 15:</span> <span class="captiontext">Listado de hosts virtuales configurados</span></div></div>
+                    <p>
+                        Pero antes de poder acceder a las diferentes secciones del servidor desde el navegador hay que tener en cuenta que, por seguridad, dicho acceso se encuentra restringido y tendremos que registrar usuarios en <code>conf/tomcat-users.xml</code> con nombre de usuario, contraseña y los roles con los que accederan.
+                    </p>
+
+                    <p>
+                        Podemos crear un usuario para cada rol o bien un usuario que tenga varios de ellos (incluso todos). Cada rol definido por <em>Tomcat</em> da acceso a una de las partes del servidor:
+                    </p>
+                    <ul>
+                        <li class="level1"><div class="li"> <strong>manager-status</strong>: Da acceso a la sección donde monitorizar el estado de Tomcat</div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>manager-gui</strong>: Da acceso al listado de aplicaciones y a poder desplegarlas desde la web </div>
+                        </li>
+                        <li class="level1"><div class="li"> <strong>admin-gui</strong>: Da acceso a la parte de administración de hosts virtuales</div>
+                        </li>
+                    </ul>
+
+                    <p>
+                        La forma en como podemos editar el fichero y crear nuevos usuarios puede verse en el siguiente fragmento del fichero configuración extraido de una instalación limpia de <em>Tomcat</em> y modificado con un usuario <code>tomcat</code> y contraseña <code>tomcat</code> con todos los roles.
+                    </p>
+                    <dl class="code">
+                        <dt><a href="/_export/code/apuntes:introduccion?codeblock=14" title="Download Snippet" class="mediafile mf_xml">conf/tomcat-users.xml</a></dt>
+                        <dd><pre class="code xml"><span class="sc3"><span class="re1">&lt;tomcat-users<span class="re2">&gt;</span></span></span>
+<span class="sc-1">&lt;!--</span>
+<span class="sc-1">  NOTE:  By default, no user is included in the &quot;manager-gui&quot; role required</span>
+<span class="sc-1">  to operate the &quot;/manager/html&quot; web application.  If you wish to use this app,</span>
+<span class="sc-1">  you must define such a user - the username and password are arbitrary.</span>
+<span class="sc-1">--&gt;</span>
+<span class="sc-1">&lt;!--</span>
+<span class="sc-1">  NOTE:  The sample user and role entries below are wrapped in a comment</span>
+<span class="sc-1">  and thus are ignored when reading this file. Do not forget to remove</span>
+<span class="sc-1">  &lt;!.. ..&gt; that surrounds them.</span>
+<span class="sc-1">--&gt;</span>
+&nbsp;
+  <span class="sc3"><span class="re1">&lt;role</span> <span class="re0">rolename</span>=<span class="st0">&quot;tomcat&quot;</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;user</span> <span class="re0">username</span>=<span class="st0">&quot;tomcat&quot;</span> <span class="re0">password</span>=<span class="st0">&quot;tomcat&quot;</span> <span class="re0">roles</span>=<span class="st0">&quot;manager-status, manager-gui, admin-gui&quot;</span><span class="re2">/&gt;</span></span>
+&nbsp;
+<span class="sc3"><span class="re1">&lt;/tomcat-users<span class="re2">&gt;</span></span></span></pre>
+                        </dd></dl>
+                    <hr />
+
+                </div>
+
+                <h2 class="sectionedit9" id="ejercicios">Ejercicios</h2>
+                <div class="level2">
+
+                    <p>
+                        <a href="/_detail/apuntes:ejercicio.png?id=apuntes%3Aintroduccion" class="media" title="apuntes:ejercicio.png"><img src="/_media/apuntes:ejercicio.png?w=75&amp;tok=a92ed5" class="mediaright" alt="" width="75" /></a>
+                    </p>
+                    <ol>
+                        <li class="level1"><div class="li"> Crea un grupo de desarrolladores con permisos para escribir en el <code>DocumentRoot</code> de <em>Apache</em> y agrega dos usuarios a dicho grupo. Comprueba que ambos pueden subir contenido a la carpeta a través de un servidor <abbr title="File Transfer Protocol">FTP</abbr></div>
+                        </li>
+                        <li class="level1"><div class="li"> Modifica la contraseña para acceder al panel de administración de Tomcat (Windows y Linux)</div>
+                        </li>
+                        <li class="level1"><div class="li"> Instala Tomcat 9 descargándolo de la web en Windows y Linux. Comprueba que funciona correctamente en ambos Sistemas Operativos</div>
+                        </li>
+                    </ol>
+                    <hr />
+
+                </div>
+
+                <h2 class="sectionedit10" id="proyectos_de_ejemplo">Proyectos de Ejemplo</h2>
+                <div class="level2">
+                    <hr />
+
+                </div>
+
+                <h2 class="sectionedit11" id="practicas">Prácticas</h2>
+                <div class="level2">
+                    <hr />
+
+                    <p>
+                        © 2017 Santiago Faci
+                    </p>
+
+                </div>
+                <div class="footnotes">
+                    <div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup>
+                        <div class="content"><a href="https://en.wikipedia.org/wiki/Client" class="urlextern" title="https://en.wikipedia.org/wiki/Client" rel="ugc nofollow">https://en.wikipedia.org/wiki/Client</a>–server_model</div></div>
+                    <div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup>
+                        <div class="content"><a href="https://en.wikipedia.org/wiki/Multitier_architecture" class="urlextern" title="https://en.wikipedia.org/wiki/Multitier_architecture" rel="ugc nofollow">https://en.wikipedia.org/wiki/Multitier_architecture</a></div></div>
+                    <div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup>
+                        <div class="content"><a href="https://en.wikipedia.org/wiki/Comparison_of_web_server_software" class="urlextern" title="https://en.wikipedia.org/wiki/Comparison_of_web_server_software" rel="ugc nofollow">https://en.wikipedia.org/wiki/Comparison_of_web_server_software</a></div></div>
+                    <div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup>
+                        <div class="content"><a href="https://en.wikipedia.org/wiki/List_of_application_servers" class="urlextern" title="https://en.wikipedia.org/wiki/List_of_application_servers" rel="ugc nofollow">https://en.wikipedia.org/wiki/List_of_application_servers</a></div></div>
+                    <div class="fn"><sup><a href="#fnt__5" id="fn__5" class="fn_bot">5)</a></sup>
+                        <div class="content"><a href="http://httpd.apache.org/docs/current/platform/windows.html#down" class="urlextern" title="http://httpd.apache.org/docs/current/platform/windows.html#down" rel="ugc nofollow">http://httpd.apache.org/docs/current/platform/windows.html#down</a></div></div>
+                </div>
+
+                <!-- wikipage stop -->
+            </div>
+
+            <div class="docInfo"><bdi>apuntes/introduccion.txt</bdi> · Last modified: 2019/01/04 13:02 (external edit)</div>
+
+        </div></div><!-- /content -->
+
+        <hr class="a11y" />
+
+        <!-- PAGE ACTIONS -->
+        <div id="dokuwiki__pagetools">
+            <h3 class="a11y">Page Tools</h3>
+            <div class="tools">
+                <ul>
+                    <li class="source"><a href="/apuntes:introduccion?do=edit" title="Show pagesource [v]" rel="nofollow" accesskey="v"><span>Show pagesource</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="/apuntes:introduccion?do=revisions" title="Old revisions [o]" rel="nofollow" accesskey="o"><span>Old revisions</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="/apuntes:introduccion?do=backlink" title="Backlinks" rel="nofollow"><span>Backlinks</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="top"><a href="#dokuwiki__top" title="Back to top [t]" rel="nofollow" accesskey="t"><span>Back to top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+            </div>
+        </div>
+    </div><!-- /wrapper -->
+
+
+    <!-- ********** FOOTER ********** -->
+    <div id="dokuwiki__footer"><div class="pad">
+        <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="license" class="urlextern">CC0 1.0 Universal</a></bdi></div>
+        <div class="buttons">
+            <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" rel="license"><img src="/lib/images/license/button/cc-zero.png" alt="CC0 1.0 Universal" /></a>        <a href="https://www.dokuwiki.org/donate" title="Donate" ><img
+                src="/lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+            <a href="https://php.net" title="Powered by PHP" ><img
+                    src="/lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+            <a href="//validator.w3.org/check/referer" title="Valid HTML5" ><img
+                    src="/lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+            <a href="//jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS" ><img
+                    src="/lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+            <a href="https://dokuwiki.org/" title="Driven by DokuWiki" ><img
+                    src="/lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+                    alt="Driven by DokuWiki" /></a>
+        </div>
+    </div></div><!-- /footer -->
+
+</div></div><!-- /site -->
+
+<div class="no"><img src="/lib/exe/taskrunner.php?id=apuntes%3Aintroduccion&amp;1637760663" width="2" height="1" alt="" /></div>
+<div id="screen__mode" class="no"></div></body>
+</html>

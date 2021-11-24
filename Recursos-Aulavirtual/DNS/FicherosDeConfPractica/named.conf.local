@@ -1,0 +1,9 @@
+zone "carlosgs.es" {
+    type primary;
+    file "/etc/bind/zones/db.carlosgs.es";
+};
+
+zone "21.172.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/db.172.21";
+};

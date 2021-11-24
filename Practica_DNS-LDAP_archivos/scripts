@@ -1,0 +1,11 @@
+ldapadd -W -D "cn=admin,dc=carlosbouzas,dc=es" -f 50.carlosbouzas.ldif
+
+ldapsearch -x -b "cn=Operaciones,ou=Groups,dc=carlosbouzas,dc=es" -D "cn=admin,dc=carlosbouzas,dc=es" -W
+
+ldapsearch - 0 -H "ldap://localhost" -D "cn=admin,dc=carlosbouzas,dc=es" -W -b "dc=carlos,dc=es" '(&(objectClass=groupOfNames)(member=cn=root,ou=django,dc=openldap))'
+
+ldapsearch -x -b "dc=carlosbouzas,dc=es" '(&(objectClass=groupOfUniqueNames)(uniqueMember=uid=operaciones,dc=carlosbouzas,dc=es))'
+
+ldapsearch -LLL -x -h localhost -b 'dc=carlosbouzas,dc=es' '(uid=desarrollo)' dn
+
+ldapsearch -LLL -x -h localhost -b 'dc=carlosbouzas,dc=es' -D "cn=admin,dc=carlosbouzas,dc=es" -W '(uid=desarrollo)' dn
